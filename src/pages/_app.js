@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import { ConfigProvider } from 'antd';
+import StepsProvider from '@/context/steps.context';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -11,7 +12,9 @@ export default function App({ Component, pageProps }) {
         },
       }}
     >
-      <Component {...pageProps} />;
+      <StepsProvider>
+        <Component {...pageProps} />
+      </StepsProvider>
     </ConfigProvider>
   );
 }

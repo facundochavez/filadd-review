@@ -16,23 +16,26 @@
     flex-direction: column;
     align-items: center;
     gap: 25px;
+    max-width: 500px;
+
 
     h1 {
       font-size: 35px;
+      text-wrap: balance;
       line-height: 0.9;
       font-weight: 400;
-      max-width: 415px;
     }
 
     p {
       font-size: 18px;
-      max-width: 415px;
       text-wrap: balance;
     }
   }
 
   footer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
 
@@ -51,14 +54,13 @@
 @media (width > 900px) {
   .hero {
     main {
+      max-width: 600px;
+
       h1 {
         font-size: 50px;
-        max-width: 580px;
       }
-
       p {
         font-size: 22px;
-    /*     max-width: unset; */
       }
     }
   }

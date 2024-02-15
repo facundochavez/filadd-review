@@ -1,0 +1,17 @@
+import StepsHeader from '@/components/StepsHeader/StepsHeader';
+import styles from './SearchSection.module.scss';
+import StepsSlider from '@/components/StepsSlider/StepsSlider';
+
+const SearchSection = () => {
+  //// COMPONENT
+  return (
+    <section className={styles.search_section}>
+      <div className={styles.search_section__max_width}>
+        <StepsHeader />
+        <StepsSlider />
+      </div>
+    </section>
+  );
+};
+
+export default SearchSection;

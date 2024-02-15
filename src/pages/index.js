@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
 import Header from '@/components/Header/Header';
-import Hero from './layouts/Hero/Hero';
-import SearchSection from './layouts/SearchSection/SearchSection';
+import Hero from '@/layouts/Hero/Hero';
+import SearchSection from '@/layouts/SearchSection/SearchSection';
 
 export default function Home() {
   return (

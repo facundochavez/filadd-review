@@ -1,0 +1,182 @@
+[
+  {
+    "id": "uba",
+    "abbreviation": "UBA",
+    "name": "Universidad de Buenos Aires"
+  },
+  {
+    "id": "unc",
+    "abbreviation": "UNC",
+    "name": "Universidad Nacional de Córdoba"
+  },
+  {
+    "id": "unlp",
+    "abbreviation": "UNLP",
+    "name": "Universidad Nacional de la Plata"
+  },
+  {
+    "id": "unr",
+    "abbreviation": "UNR",
+    "name": "Universidad Nacional de Rosario"
+  },
+  {
+    "id": "iua",
+    "abbreviation": "IUA",
+    "name": "Instituto Universitario Aeronáutico"
+  },
+  {
+    "id": "iucbc",
+    "abbreviation": "IUCBC",
+    "name": "Instituto Universitario de Ciencias Biomédicas de Córdoba"
+  },
+  {
+    "id": "monserrat",
+    "abbreviation": "Monserrat",
+    "name": "Colegio Nacional de Monserrat"
+  },
+  {
+    "id": "uade",
+    "abbreviation": "UADE",
+    "name": "Universidad Argentina de la Empresa"
+  },
+  {
+    "id": "uader",
+    "abbreviation": "UADER",
+    "name": "Universidad Autónoma de Entre Ríos"
+  },
+  {
+    "id": "uai",
+    "abbreviation": "UAI",
+    "name": "Universidad Abierta Interamericana"
+  },
+  {
+    "id": "ubp",
+    "abbreviation": "UBP",
+    "name": "Universidad Blas Pascal"
+  },
+  {
+    "id": "ucc",
+    "abbreviation": "UCC",
+    "name": "Universidad Católica de Córdoba"
+  },
+  {
+    "id": "ucel",
+    "abbreviation": "UCEL",
+    "name": "Universidad del Centro Educativo Latinoamericano"
+  },
+  {
+    "id": "ues21",
+    "abbreviation": "UES21",
+    "name": "Universidad Siglo XXI"
+  },
+  {
+    "id": "unca",
+    "abbreviation": "UNCA",
+    "name": "Universidad Nacional de Catamarca"
+  },
+  {
+    "id": "uncoma",
+    "abbreviation": "UNComa",
+    "name": "Universidad Nacional del Comahue"
+  },
+  {
+    "id": "uncuyo",
+    "abbreviation": "UNCuyo",
+    "name": "Universidad Nacional de Cuyo"
+  },
+  {
+    "id": "uner",
+    "abbreviation": "UNER",
+    "name": "Universidad Nacional de Entre Ríos"
+  },
+  {
+    "id": "unisal",
+    "abbreviation": "UNISAL",
+    "name": "Universidad Salesiana"
+  },
+  {
+    "id": "unl",
+    "abbreviation": "UNL",
+    "name": "Universidad Nacional del Litoral"
+  },
+  {
+    "id": "unla",
+    "abbreviation": "UNLa",
+    "name": "Universidad Nacional de Lanús"
+  },
+  {
+    "id": "unlam",
+    "abbreviation": "UNLaM",
+    "name": "Universidad Nacional de La Matanza"
+  },
+  {
+    "id": "unlar",
+    "abbreviation": "UNLaR",
+    "name": "Universidad Nacional de La Rioja"
+  },
+  {
+    "id": "unlz",
+    "abbreviation": "UNLZ",
+    "name": "Universidad Nacional de Lomas de Zamora"
+  },
+  {
+    "id": "unmdp",
+    "abbreviation": "UNMdP",
+    "name": "Universidad Nacional de Mar del Plata"
+  },
+  {
+    "id": "unne",
+    "abbreviation": "UNNE",
+    "name": "Universidad Nacional del Nordeste"
+  },
+  {
+    "id": "unq",
+    "abbreviation": "UNQ",
+    "name": "Universidad Nacional de Quilmes"
+  },
+  {
+    "id": "unsa",
+    "abbreviation": "UNSa",
+    "name": "Universidad Nacional de Salta"
+  },
+  {
+    "id": "unsam",
+    "abbreviation": "UNSAM",
+    "name": "Universidad Nacional de San Martín"
+  },
+  {
+    "id": "unt",
+    "abbreviation": "UNT",
+    "name": "Universidad Nacional de Tucumán"
+  },
+  {
+    "id": "unvm",
+    "abbreviation": "UNVM",
+    "name": "Universidad Nacional Villa María"
+  },
+  {
+    "id": "up",
+    "abbreviation": "UP",
+    "name": "Universidad de Palermo"
+  },
+  {
+    "id": "usp-t",
+    "abbreviation": "USP-T",
+    "name": "Universidad de San Pablo - Tucumán"
+  },
+  {
+    "id": "utn.ba",
+    "abbreviation": "UTN.BA",
+    "name": "Universidad Tecnológica Nacional (BA)"
+  },
+  {
+    "id": "utn.cba",
+    "abbreviation": "UTN.CBA",
+    "name": "Universidad Tecnológica Nacional (CBA)"
+  },
+  {
+    "id": "utn.ro",
+    "abbreviation": "UTN.RO",
+    "name": "Universidad Tecnológica Nacional (RO)"
+  }
+]

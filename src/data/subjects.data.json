@@ -1,0 +1,241 @@
+[
+  {
+    "groupId": "cbc",
+    "groupName": "Ciclo Básico Común (CBC)",
+    "subjects": [
+      { "subjectId": "cp22", "subjectName": "Ciencias Políticas" },
+      { "subjectId": "icse24", "subjectName": "ICSE 24" },
+      { "subjectId": "ipc40", "subjectName": "IPC 40" },
+      {
+        "subjectId": "principios-derechos-humanos",
+        "subjectName": "Principios de Derechos Humanos y Derecho Constitucional 50"
+      },
+      {
+        "subjectId": "principios-generales-latinoamericanos",
+        "subjectName": "Principios Generales Del Derecho Latinoamericano 49"
+      },
+      { "subjectId": "sociologia14", "subjectName": "Sociologia 14" }
+    ]
+  },
+  {
+    "groupId": "cpc",
+    "groupName": "Ciclo Profesional Común (CPC)",
+    "subjects": [
+      {
+        "subjectId": "contratos",
+        "subjectName": "Contratos Civiles y Comerciales"
+      },
+      {
+        "subjectId": "derecho-administrativo",
+        "subjectName": "Derecho Administrativo"
+      },
+      {
+        "subjectId": "derechos-humanos",
+        "subjectName": "Derechos Humanos y Garantias"
+      },
+      {
+        "subjectId": "analisis-economico",
+        "subjectName": "Elementos de Analisis Economico y Financiero"
+      },
+      {
+        "subjectId": "derecho-civil",
+        "subjectName": "Elementos de Derecho Civil (parte General)"
+      },
+      {
+        "subjectId": "derecho-comercial",
+        "subjectName": "Elementos de Derecho Comercial"
+      },
+      {
+        "subjectId": "derecho-constitucional",
+        "subjectName": "Elementos de Derecho Constitucional"
+      },
+      {
+        "subjectId": "derecho-trabajo",
+        "subjectName": "Elementos de Derecho de Trabajo y Seguridad Social"
+      },
+      {
+        "subjectId": "derecho-penal",
+        "subjectName": "Elementos de Derecho Penal y Procesal Penal"
+      },
+      {
+        "subjectId": "procesal-civil",
+        "subjectName": "Elementos de Derecho Procesal Civil y Comercial"
+      },
+      {
+        "subjectId": "derechos-reales",
+        "subjectName": "Elementos de Derechos Reales"
+      },
+      {
+        "subjectId": "obligaciones",
+        "subjectName": "Obligaciones Civiles y Comerciales"
+      },
+      { "subjectId": "teoria-estado", "subjectName": "Teoria del Estado" },
+      {
+        "subjectId": "teoria-general",
+        "subjectName": "Teoria General y Filosofia del Derecho"
+      }
+    ]
+  },
+  {
+    "groupId": "cpo",
+    "groupName": "Ciclo Profesional Orientado (CPO)",
+    "subjects": [
+      {
+        "subjectId": "derecho-familia",
+        "subjectName": "Derecho de Familia y Sucesiones"
+      },
+      {
+        "subjectId": "derecho-integracion",
+        "subjectName": "Derecho de Integracion"
+      },
+      {
+        "subjectId": "derecho-internacional-privado",
+        "subjectName": "Derecho Internacional Privado"
+      },
+      {
+        "subjectId": "derecho-internacional-publico",
+        "subjectName": "Derecho Internacional Publico"
+      },
+      {
+        "subjectId": "finanzas-publicas",
+        "subjectName": "Finanzas Publicas y Derecho Tributario"
+      },
+      {
+        "subjectId": "sociedades-civiles",
+        "subjectName": "Sociedades Civiles y Comerciales"
+      }
+    ]
+  },
+  {
+    "groupId": "idiomas",
+    "groupName": "Idiomas",
+    "subjects": [
+      { "subjectId": "ingles-unico", "subjectName": "Ingles Unico" },
+      { "subjectId": "frances", "subjectName": "Francés" }
+    ]
+  },
+  {
+    "groupId": "otras-materias",
+    "groupName": "Otras materias",
+    "subjects": [
+      {
+        "subjectId": "acc-enf-trab",
+        "subjectName": "Accidentes y Enfermedades de Trabajo"
+      },
+      { "subjectId": "conc-qui", "subjectName": "Concursos y Quiebras" },
+      { "subjectId": "cont-merc", "subjectName": "Contratación Mercantil" },
+      { "subjectId": "criminologia", "subjectName": "Criminología" },
+      { "subjectId": "derecho-colectivo", "subjectName": "Derecho Colectivo" },
+      {
+        "subjectId": "derecho-const-econ",
+        "subjectName": "Derecho Constitucional Económico"
+      },
+      {
+        "subjectId": "derecho-const-profundizado",
+        "subjectName": "Derecho Constitucional Profundizado y Procesal Constitucional"
+      },
+      {
+        "subjectId": "derecho-2-3-generacion",
+        "subjectName": "Derecho de 2ª y 3ª Generación"
+      },
+      {
+        "subjectId": "derecho-notarial-registral-inmob",
+        "subjectName": "Derecho Notarial, Registral e Inmobiliario"
+      },
+      {
+        "subjectId": "derecho-procesal-trabajo",
+        "subjectName": "Derecho Procesal del Trabajo"
+      },
+      { "subjectId": "derecho-romano", "subjectName": "Derecho Romano" },
+      {
+        "subjectId": "derecho-tributario-notarial",
+        "subjectName": "Derecho Tributario Notarial"
+      },
+      { "subjectId": "derecho-economia", "subjectName": "Derecho y Economía" },
+      {
+        "subjectId": "derecho-sociedad-informacion",
+        "subjectName": "Derechos y Sociedad de la Información"
+      },
+      {
+        "subjectId": "derechos-consumidor",
+        "subjectName": "Derechos del Consumidor"
+      },
+      {
+        "subjectId": "derechos-humanos-subjetivos",
+        "subjectName": "Derechos Humanos y Derechos Subjetivos"
+      },
+      {
+        "subjectId": "empleo-publico-admin-nacional",
+        "subjectName": "Empleo Público en la Administración Nacional"
+      },
+      {
+        "subjectId": "finanzas-publicas-derecho-tributario",
+        "subjectName": "Finanzas Públicas y Derecho Tributario"
+      },
+      {
+        "subjectId": "garantias-constitucionales-derecho-penal",
+        "subjectName": "Garantías Constitucionales en el Derecho Penal"
+      },
+      {
+        "subjectId": "genocidio-politica-exclusion",
+        "subjectName": "Genocidio, Política y Exclusión"
+      },
+      {
+        "subjectId": "historia-formacion-estado-argentino",
+        "subjectName": "Historia de la Formación del Estado Argentino"
+      },
+      {
+        "subjectId": "historia-derecho-familia",
+        "subjectName": "Historia del Derecho de Familia"
+      },
+      {
+        "subjectId": "prueba-derecho-danos",
+        "subjectName": "La Prueba en el Derecho de Daños"
+      },
+      {
+        "subjectId": "nulidades-matrimoniales",
+        "subjectName": "Nulidades Matrimoniales"
+      },
+      {
+        "subjectId": "organizacion-administrativa",
+        "subjectName": "Organización Administrativa"
+      },
+      {
+        "subjectId": "principios-derecho-privado",
+        "subjectName": "Principios del Derecho Privado"
+      },
+      {
+        "subjectId": "problemas-linguisticos-teorias-definicion-derecho",
+        "subjectName": "Problemas Lingüísticos y Teorías en la Definición del Derecho"
+      },
+      {
+        "subjectId": "procedimientos-recursos-administrativos",
+        "subjectName": "Procedimientos y Recursos Administrativos"
+      },
+      {
+        "subjectId": "razonamiento-judicial",
+        "subjectName": "Razonamiento Judicial"
+      },
+      {
+        "subjectId": "regimen-empleo-publico",
+        "subjectName": "Régimen del Empleo Público"
+      },
+      {
+        "subjectId": "regimen-patrimonial-matrimonio",
+        "subjectName": "Régimen Patrimonial del Matrimonio"
+      },
+      {
+        "subjectId": "regimen-tributario-argentino",
+        "subjectName": "Régimen Tributario Argentino"
+      },
+      {
+        "subjectId": "relaciones-colectivas-trabajo",
+        "subjectName": "Relaciones Colectivas del Trabajo"
+      },
+      {
+        "subjectId": "relaciones-individuales-trabajo",
+        "subjectName": "Relaciones Individuales del Trabajo"
+      }
+    ]
+  }
+]
