@@ -23,14 +23,24 @@
 
     main {
       width: 100%;
-      display: flex;
+      display: none;
       justify-content: flex-end;
     }
 
     aside {
-      display: flex;
+      display: none;
       flex-wrap: nowrap;
       gap: 10px;
+    }
+  }
+}
+
+@media (width > 1200px) {
+  .header {
+    &__max_width {
+      main, aside {
+        display: flex
+      }
     }
   }
 }

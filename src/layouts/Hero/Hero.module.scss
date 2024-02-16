@@ -2,7 +2,7 @@
   margin-top: 71px;
   padding: 50px 5%;
   width: 100%;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +53,8 @@
 
 @media (width > 900px) {
   .hero {
+    min-height: 400px;
+
     main {
       max-width: 600px;
 
