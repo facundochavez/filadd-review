@@ -23,7 +23,7 @@ const StepsInput = () => {
       <Breadcrumb
         items={[
           { title: 'Universidad Nacional de Salta' },
-          { title: 'Ingeniería CIvil' },
+          { title: 'Ingeniería Civil' },
         ]}
         style={{ width: '100%' }}
       />

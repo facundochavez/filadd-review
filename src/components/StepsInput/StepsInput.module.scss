@@ -5,9 +5,14 @@
   align-items: center;
   gap: 15px;
 
-  ol {
+  label {
     width: 100%;
-    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+  }
+
+  ol {
     li {
       color: white !important;
       cursor: pointer;
@@ -22,12 +27,6 @@
     }
   }
 
-  label {
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 22px;
-  }
 }
 
 @media (width > 900px) {
@@ -35,5 +34,13 @@
     label {
       font-size: 30px;
     }
+
+    ol {
+      
+      li {
+        font-size: 16px;
+      }
+    }
   }
+  
 }
