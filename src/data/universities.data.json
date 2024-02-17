@@ -25,13 +25,8 @@
     "name": "Instituto Universitario Aeronáutico"
   },
   {
-    "id": "iucbc",
-    "abbreviation": "IUCBC",
-    "name": "Instituto Universitario de Ciencias Biomédicas de Córdoba"
-  },
-  {
     "id": "monserrat",
-    "abbreviation": "Monserrat",
+    "abbreviation": "Mons",
     "name": "Colegio Nacional de Monserrat"
   },
   {
@@ -60,14 +55,19 @@
     "name": "Universidad Católica de Córdoba"
   },
   {
-    "id": "ucel",
-    "abbreviation": "UCEL",
-    "name": "Universidad del Centro Educativo Latinoamericano"
-  },
-  {
     "id": "ues21",
     "abbreviation": "UES21",
     "name": "Universidad Siglo XXI"
+  },
+  {
+    "id": "iucbc",
+    "abbreviation": "IUCBC",
+    "name": "Instituto Universitario de Ciencias Biomédicas de Córdoba"
+  },
+  {
+    "id": "ucel",
+    "abbreviation": "UCEL",
+    "name": "Universidad del Centro Educativo Latinoamericano"
   },
   {
     "id": "unca",

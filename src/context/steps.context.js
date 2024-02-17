@@ -1,8 +1,16 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useRef, useState } from 'react';
 
 export const StepsContext = createContext();
 
 const StepsProvider = ({ children }) => {
+  const [selectedStep, setSelectedStep] = useState(1);
+  const [selectedUniversity, setSelectedUniversity] = useState('');
+  const [step1ShowAll, setStep1ShowAll] = useState(false);
+  const [step2ShowAll, setStep2ShowAll] = useState(false);
+  const [step3ShowAll, setStep3ShowAll] = useState(false);
+  const inputRef = useRef();
+  const [inputValue, setInputValue] = useState('');
+
   const steps = [
     {
       key: '1',
@@ -26,15 +34,36 @@ const StepsProvider = ({ children }) => {
       placeHolder: 'Economía II',
     },
   ];
-  const [selectedStep, setSelectedStep] = useState(1);
+
+  const changeStep = (step) => {
+    setStep1ShowAll(false);
+    setStep2ShowAll(false);
+    setStep3ShowAll(false);
+    setSelectedStep(step);
+    setInputValue('');
+    inputRef.current.value = inputValue;
+    inputRef.current.focus();
+  }
 
   //// COMPONENT
   return (
     <StepsContext.Provider
       value={{
-        steps,
         selectedStep,
         setSelectedStep,
+        selectedUniversity,
+        setSelectedUniversity,
+        step1ShowAll,
+        setStep1ShowAll,
+        step2ShowAll,
+        setStep2ShowAll,
+        step3ShowAll,
+        setStep3ShowAll,
+        steps,
+        changeStep,
+        inputRef,
+        inputValue,
+        setInputValue,
       }}
     >
       {children}
