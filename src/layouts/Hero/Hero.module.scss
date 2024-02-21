@@ -20,14 +20,14 @@
 
 
     h1 {
-      font-size: 35px;
+      font-size: 42px;
       text-wrap: balance;
       line-height: 0.9;
       font-weight: 400;
     }
 
     p {
-      font-size: 18px;
+      font-size: 20px;
       text-wrap: balance;
     }
   }
@@ -53,7 +53,7 @@
 
 @media (width > 900px) {
   .hero {
-    min-height: 400px;
+    min-height: 350px;
 
     main {
       max-width: 600px;
@@ -62,7 +62,24 @@
         font-size: 50px;
       }
       p {
-        font-size: 22px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (width > 1200px) {
+  .hero {
+    min-height: 450px;
+    
+    main {
+      max-width: 700px;
+      
+      h1 {
+        font-size: 60px;
+      }
+      p {
+        font-size: 28px;
       }
     }
   }

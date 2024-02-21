@@ -1,0 +1,130 @@
+import ExplanationCard from '@/components/ExplanationCard/ExplanationCard';
+import styles from './HowItWorksSection.module.scss';
+import Image from 'next/image';
+import Button from '@/components/Button/Button';
+
+const HowItWorksSection = () => {
+  const explanationItems = [
+    {
+      title: 'Comienza gratis',
+      description: (
+        <p>
+          Crea una cuenta y encuentra rápidamente el material de estudio de tu
+          carrera.
+        </p>
+      ),
+      cta: 'Crear una cuenta ahora',
+    },
+    {
+      title: 'Conéctate',
+      description: (
+        <p>
+          Sigue a otros estudiantes y a referentes de tu carrera para mantenerte
+          al tanto de su contenido compartido.
+        </p>
+      ),
+    },
+    {
+      title: 'Enriquece a la comunidad',
+      description: (
+        <p>
+          Colabora con los demás subiendo tus propios archivos. También podrás
+          valorar otros documentos y reportar archivos inapropiados. <br />{' '}
+          <br /> ¡Completa tareas para acceder a Premium por 10 días de forma
+          gratuita!
+        </p>
+      ),
+      cta: 'Subir archivos',
+    },
+    {
+      title: 'Hazte Premium',
+      description: (
+        <p>
+          Con los planes pagos podrás acceder de forma ilimitada a los
+          documentos mejor valorados y contarás con nuestra asistencia
+          personalizada.
+        </p>
+      ),
+      cta: 'Ver planes',
+    },
+    {
+      title: 'Accede a la Academia',
+      description: (
+        <p>
+          Nuestros cursos virtuales están creados según los programas de
+          estudio específicos de cada facultad. Podrás acceder a ellos* desde
+          cualquier lugar, incluso desde tu móvil con <a>nuestra aplicación.</a>{' '}
+          <br /> <br />
+          Además, tendrás contacto directo con tu profe vía WhatsApp y recibirás un
+          resumen en PDF especialmente diseñado para aprobar la materia.
+        </p>
+      ),
+      cta: 'Ir a la Academia',
+    },
+  ];
+
+  //// COMPONENT
+  return (
+    <section className={styles.how_it_works_section}>
+      <h2>Cómo funciona Filadd</h2>
+      <ul className={styles.how_it_works_section__cards}>
+        <li>
+          <ExplanationCard item={explanationItems[0]} />
+          <picture style={{ minWidth: '400px' }}>
+            <Image
+              src='/images/explanation-image1.jpg'
+              alt='Illustration'
+              fill
+              objectFit='cover'
+            />
+          </picture>
+        </li>
+        <li>
+          <ExplanationCard item={explanationItems[1]} isWhite />
+        </li>
+        <li>
+          <picture style={{ minWidth: '300px' }}>
+            <Image
+              src='/images/explanation-image3.jpg'
+              alt='Illustration'
+              fill
+              objectFit='cover'
+            />
+          </picture>
+          <ExplanationCard item={explanationItems[2]} />
+        </li>
+        <li>
+          <ExplanationCard item={explanationItems[3]} isWhite />
+          <picture style={{ minWidth: '350px' }}>
+            <Image
+              src='/images/explanation-image4.jpg'
+              alt='Illustration'
+              fill
+              objectFit='cover'
+            />
+          </picture>
+        </li>
+        <li>
+          <ExplanationCard item={explanationItems[4]} />
+        </li>
+        <li>
+          <p className={styles.how_it_works_section__asterisk}>
+            * Por defecto tienes desbloqueados los primeros capítulos de todos
+            los cursos. Con tu cuenta Premium tendrás importantes descuentos
+            para acceder a los cursos completos.
+          </p>
+          <picture style={{ minWidth: '500px', minHeight: '300px' }}>
+            <Image
+              src='/images/explanation-image5.jpg'
+              alt='Illustration'
+              fill
+              objectFit='cover'
+            />
+          </picture>
+        </li>
+      </ul>
+    </section>
+  );
+};
+
+export default HowItWorksSection;

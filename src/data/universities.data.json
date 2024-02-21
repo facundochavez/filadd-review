@@ -20,19 +20,9 @@
     "name": "Universidad Nacional de Rosario"
   },
   {
-    "id": "iua",
-    "abbreviation": "IUA",
-    "name": "Instituto Universitario Aeronáutico"
-  },
-  {
     "id": "monserrat",
-    "abbreviation": "Mons",
+    "abbreviation": "Monserrat",
     "name": "Colegio Nacional de Monserrat"
-  },
-  {
-    "id": "uade",
-    "abbreviation": "UADE",
-    "name": "Universidad Argentina de la Empresa"
   },
   {
     "id": "uader",
@@ -54,10 +44,21 @@
     "abbreviation": "UCC",
     "name": "Universidad Católica de Córdoba"
   },
+
   {
     "id": "ues21",
     "abbreviation": "UES21",
     "name": "Universidad Siglo XXI"
+  },
+  {
+    "id": "iua",
+    "abbreviation": "IUA",
+    "name": "Instituto Universitario Aeronáutico"
+  },
+  {
+    "id": "uade",
+    "abbreviation": "UADE",
+    "name": "Universidad Argentina de la Empresa"
   },
   {
     "id": "iucbc",

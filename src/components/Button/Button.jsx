@@ -7,8 +7,8 @@ const Button = (props) => {
     primary: 'primary',
     'primary-white': 'primary',
     secondary: 'text',
-    'primary-transparent': 'primary',
-    'secondary-transparent': 'primary',
+    'transparent-blue': 'primary',
+    'transparent-white': 'primary',
     link: 'link',
   };
 

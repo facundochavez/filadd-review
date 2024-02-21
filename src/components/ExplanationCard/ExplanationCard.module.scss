@@ -1,0 +1,70 @@
+.explanation_card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  background-color: var(--color-primary);
+  border-radius: 15px;
+  padding: 30px;
+
+  h3 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-wrap: pretty;
+
+    a {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media (width > 900px) {
+  .explanation_card {
+    padding: 60px;
+    
+    h3 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    &__cta {
+      button {
+        margin-top: 20px;
+        width: unset;
+        scale: 1.2;
+      }
+    }
+  }
+}

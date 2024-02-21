@@ -2,10 +2,39 @@ import { Breadcrumb, Input } from 'antd';
 import styles from './StepsInput.module.scss';
 import Image from 'next/image';
 import { useStepsContext } from '@/context/steps.context';
+import steps from '@/data/steps.data.json';
+
 
 const StepsInput = () => {
-  const { steps, selectedStep, inputRef, inputValue, setInputValue } =
-    useStepsContext();
+  const {
+    selectedStep,
+    changeStep,
+    selectedUniversity,
+    selectedCareer,
+    inputRef,
+    inputValue,
+    setInputValue,
+  } = useStepsContext();
+
+
+  // BREADCRUMB ITEMS
+  const firstItem = {
+    title: (
+      <Image src='/icons/home.svg' alt='University' width={19} height={19} />
+    ),
+    onClick: () => {
+      changeStep(1);
+    },
+  };
+  const secondItem = {
+    title: selectedUniversity,
+    onClick: () => {
+      selectedStep !== 2 && changeStep(2);
+    },
+  };
+  const thirdItem = {
+    title: selectedCareer,
+  };
 
   //// COMPONENT
   return (
@@ -13,6 +42,7 @@ const StepsInput = () => {
       <label>{steps[selectedStep - 1]?.question}</label>
       <Input
         type='text'
+        allowClear
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         ref={inputRef}
@@ -28,11 +58,16 @@ const StepsInput = () => {
           />
         }
       />
+
       <Breadcrumb
-        items={[
-          { title: 'Universidad Nacional de Salta' },
-          { title: 'Ingeniería Civil' },
-        ]}
+        items={
+          selectedStep === 1
+            ? []
+            : selectedStep === 2
+            ? [firstItem, secondItem]
+            : [firstItem, secondItem, thirdItem]
+        }
+        className={styles.breadcrumb}
         style={{ width: '100%' }}
       />
     </div>

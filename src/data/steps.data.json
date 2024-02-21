@@ -1,0 +1,23 @@
+[
+  {
+    "key": "1",
+    "label": "Universidad",
+    "icon": "/icons/icon-university.svg",
+    "question": "¿Dónde estás estudiando?",
+    "placeHolder": "Universidad Nacional de Salta"
+  },
+  {
+    "key": "2",
+    "label": "Carrera",
+    "icon": "/icons/icon-career.svg",
+    "question": "¿Qué estás estudiando?",
+    "placeHolder": "Ingeniería Industrial"
+  },
+  {
+    "key": "3",
+    "label": "Materia",
+    "icon": "/icons/icon-subject.svg",
+    "question": "¿Y qué materia?",
+    "placeHolder": "Economía II"
+  }
+]

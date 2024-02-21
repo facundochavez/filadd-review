@@ -9,7 +9,6 @@ const Header = () => {
     {
       label: 'Inicio',
       key: 'home',
-      
     },
     {
       label: 'Nosotros',
@@ -48,10 +47,11 @@ const Header = () => {
             mode='horizontal'
             items={navItems}
             defaultSelectedKeys={['home']}
+            style={{ flex: 'auto', justifyContent: 'flex-end' }}
           />
         </main>
         <aside className={styles.buttons}>
-{/*           <Button type='link' size='large' styles={{ color: '#2929FA' }}>
+          {/*           <Button type='link' size='large' styles={{ color: '#2929FA' }}>
             Filadd Profesional{' '}
             <Image
               src='/icons/arrow-right.svg'
@@ -61,7 +61,7 @@ const Header = () => {
               style={{ marginLeft: 5 }}
             />{' '}
           </Button> */}
-          <Button style={{ marginLeft: '20px'}} >Registrarme</Button>
+          <Button style={{ marginLeft: '20px' }}>Registrarme</Button>
           <Button type='primary'>Ingresar</Button>
         </aside>
       </div>

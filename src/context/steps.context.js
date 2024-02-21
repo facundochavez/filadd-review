@@ -1,69 +1,120 @@
-import { createContext, useContext, useRef, useState } from 'react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import nonFilteredUniversities from '@/data/universities.data.json';
+import nonFilteredCareers from '@/data/careers.data.json';
+import nonFilteredSubjects from '@/data/subjects.data.json';
+import Normalize from '@/Services/Normalize';
 
 export const StepsContext = createContext();
 
 const StepsProvider = ({ children }) => {
+  const sectionRef = useRef();
+  const [sliderHeight, setSliderHeight] = useState('unset');
   const [selectedStep, setSelectedStep] = useState(1);
   const [selectedUniversity, setSelectedUniversity] = useState('');
+  const [selectedUniversityAbbreviation, setSelectedUniversityAbbreviation] =
+    useState('');
+  const [selectedCareer, setSelectedCareer] = useState('');
+
   const [step1ShowAll, setStep1ShowAll] = useState(false);
   const [step2ShowAll, setStep2ShowAll] = useState(false);
   const [step3ShowAll, setStep3ShowAll] = useState(false);
+
   const inputRef = useRef();
   const [inputValue, setInputValue] = useState('');
+  const [universities, setUniversities] = useState(nonFilteredUniversities);
+  const [careers, setCareers] = useState(nonFilteredCareers);
+  const [subjects, setSubjects] = useState(nonFilteredSubjects);
 
-  const steps = [
-    {
-      key: '1',
-      label: 'Universidad',
-      icon: '/icons/icon-university.svg',
-      question: '¿Dónde estás estudiando?',
-      placeHolder: 'Universidad Nacional de Salta',
-    },
-    {
-      key: '2',
-      label: 'Carrera',
-      icon: '/icons/icon-career.svg',
-      question: '¿Qué estás estudiando?',
-      placeHolder: 'Ingeniería Industrial',
-    },
-    {
-      key: '3',
-      label: 'Materia',
-      icon: '/icons/icon-subject.svg',
-      question: '¿Y qué materia?',
-      placeHolder: 'Economía II',
-    },
-  ];
-
+  // HANDLING STEPS
   const changeStep = (step) => {
     setStep1ShowAll(false);
     setStep2ShowAll(false);
     setStep3ShowAll(false);
+
     setSelectedStep(step);
     setInputValue('');
-    inputRef.current.value = inputValue;
-    inputRef.current.focus();
-  }
+    inputRef.current.focus({ preventScroll: true });
+
+    setTimeout(() => {
+      if (sectionRef.current) {
+        window.scrollTo({
+          top: sectionRef.current.offsetTop - 80,
+          behavior: 'smooth',
+        });
+      }
+    }, 10);
+  };
+
+  // HANDLING INPUT SEARCH
+  useEffect(() => {
+    setStep1ShowAll(false);
+    setStep2ShowAll(false);
+    setStep3ShowAll(false);
+    const normalizedInputValue = Normalize(inputValue);
+    if (normalizedInputValue !== '') {
+      if (selectedStep === 1) {
+        const filteredUniversities = nonFilteredUniversities.filter(
+          (university) =>
+            Normalize(university.name).includes(normalizedInputValue) ||
+            Normalize(university.abbreviation).includes(normalizedInputValue)
+        );
+        setUniversities(filteredUniversities);
+      } else if (selectedStep === 2) {
+        const filteredCareers = nonFilteredCareers.filter((career) =>
+          Normalize(career.name).includes(normalizedInputValue)
+        );
+        setCareers(filteredCareers);
+      } else {
+        const filteredSubjects = nonFilteredSubjects
+          .map((group) => {
+            const filteredGroup = {
+              ...group,
+              subjects: group.subjects.filter((subject) =>
+                Normalize(subject.name).includes(normalizedInputValue)
+              ),
+            };
+
+            return filteredGroup.subjects.length > 0 ? filteredGroup : null;
+          })
+          .filter((group) => group !== null);
+
+        setSubjects(filteredSubjects);
+      }
+    } else {
+      setUniversities(nonFilteredUniversities);
+      setCareers(nonFilteredCareers);
+      setSubjects(nonFilteredSubjects);
+    }
+  }, [inputValue]);
 
   //// COMPONENT
   return (
     <StepsContext.Provider
       value={{
+        sectionRef,
+        sliderHeight,
+        setSliderHeight,        
         selectedStep,
         setSelectedStep,
         selectedUniversity,
         setSelectedUniversity,
+        selectedUniversityAbbreviation,
+        setSelectedUniversityAbbreviation,
+        selectedCareer,
+        setSelectedCareer,
         step1ShowAll,
         setStep1ShowAll,
         step2ShowAll,
         setStep2ShowAll,
         step3ShowAll,
         setStep3ShowAll,
-        steps,
-        changeStep,
         inputRef,
         inputValue,
         setInputValue,
+        changeStep,
+        universities,
+        careers,
+        subjects,
       }}
     >
       {children}

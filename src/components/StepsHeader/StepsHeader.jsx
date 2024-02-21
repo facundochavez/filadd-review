@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './StepsHeader.module.scss';
 import { useStepsContext } from '@/context/steps.context';
+import steps from '@/data/steps.data.json';
 
 const StepsHeader = () => {
-  const { steps } = useStepsContext();
 
   //// COMPONENT
   return (
@@ -16,7 +16,7 @@ const StepsHeader = () => {
 };
 
 const Step = ({ step }) => {
-  const { selectedStep, setSelectedStep } = useStepsContext();
+  const { selectedStep, changeStep } = useStepsContext();
   //// COMPONENT
   return (
     <>
@@ -28,7 +28,13 @@ const Step = ({ step }) => {
       )}
       <div
         className={styles.step}
-        style={{ opacity: step.key <= selectedStep ? 1 : 0.25 }}
+        style={{
+          opacity: step.key <= selectedStep ? 1 : 0.25,
+          cursor: step.key < selectedStep ? 'pointer' : 'default',
+        }}
+        onClick={() => {
+          if (step.key < selectedStep) changeStep(parseInt(step.key));
+        }}
       >
         <picture>
           <Image src={step.icon} alt={`Icono de ${step.label}`} fill />

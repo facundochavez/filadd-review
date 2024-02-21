@@ -5,6 +5,9 @@ import styles from '@/styles/Home.module.scss';
 import Header from '@/components/Header/Header';
 import Hero from '@/layouts/Hero/Hero';
 import SearchSection from '@/layouts/SearchSection/SearchSection';
+import StatisticsSection from '@/layouts/StatisticsSection/StatisticsSection';
+import HowItWorksSection from '@/layouts/HowItWorksSection/HowItWorksSection';
+import TestimoniesSection from '@/layouts/TestimoniesSection/TestimoniesSection';
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
       <main className={`${styles.main}`}>
         <Hero />
         <SearchSection />
+        <StatisticsSection />
+        <HowItWorksSection />
+        <TestimoniesSection />
       </main>
     </>
   );
