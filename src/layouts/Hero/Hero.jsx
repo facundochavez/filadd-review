@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
       </main>
       <footer>
-        <Button /* type='secondary' */ >Registrarme</Button>
+        <Button >Registrarme</Button>
         <Button
           type='primary'
           style={{ paddingLeft: '35px', paddingRight: '35px' }}

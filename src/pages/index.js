@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
 import Header from '@/components/Header/Header';
 import Hero from '@/layouts/Hero/Hero';
@@ -8,6 +6,9 @@ import SearchSection from '@/layouts/SearchSection/SearchSection';
 import StatisticsSection from '@/layouts/StatisticsSection/StatisticsSection';
 import HowItWorksSection from '@/layouts/HowItWorksSection/HowItWorksSection';
 import TestimoniesSection from '@/layouts/TestimoniesSection/TestimoniesSection';
+import RegisterSection from '@/layouts/RegisterSection/RegisterSection';
+import ProfessionalSection from '@/layouts/ProfessionalSection/ProfessionalSection';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
         <StatisticsSection />
         <HowItWorksSection />
         <TestimoniesSection />
+        <RegisterSection />
+        <ProfessionalSection />
+        <Footer />
       </main>
     </>
   );

@@ -7,22 +7,23 @@
   background-color: var(--color-primary);
   border-radius: 15px;
   padding: 30px;
+  /* max-width: 600px; */
 
   h3 {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
   }
 
   p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.4;
     text-wrap: pretty;
 
     a {
       color: white;
       text-decoration: underline;
       cursor: pointer;
-      
+
       &:hover {
         opacity: 0.8;
       }
@@ -36,8 +37,8 @@
   &__cta {
     width: 100%;
     display: flex;
-    justify-content: center;
-    
+    justify-content: flex-start;
+
     button {
       margin-top: 10px;
       width: 100%;
@@ -48,7 +49,8 @@
 @media (width > 900px) {
   .explanation_card {
     padding: 60px;
-    
+    max-width: unset;
+
     h3 {
       font-size: 40px;
       margin-bottom: 10px;
@@ -60,10 +62,13 @@
     }
 
     &__cta {
+      /* padding-left: 12px; */
+
       button {
         margin-top: 20px;
         width: unset;
         scale: 1.2;
+        transform-origin: left;
       }
     }
   }

@@ -43,3 +43,13 @@ body {
 .ant-dropdown-menu-title-content {
   font-size: 16px !important;
 }
+
+.ant-divider {
+  color: var(--color-dark-gray) !important;
+}
+
+.ant-divider-with-text::before, 
+.ant-divider-with-text::after {
+  border-block-start: 1px solid #c9c9c9 !important;
+  /* border-block-start-color: #CECECE !important; */ 
+}

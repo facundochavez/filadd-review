@@ -1,5 +1,6 @@
 import TestimonyCard from '@/components/TestimonyCard/TestimonyCard';
 import styles from './TestimoniesSection.module.scss';
+import Button from '@/components/Button/Button';
 
 const testimonies = [
   {
@@ -62,6 +63,9 @@ const TestimoniesSection = () => {
             <TestimonyCard testimony={testimony} key={testimony.id} />
           ))}
         </ul>
+{/*         <footer>
+          <Button>Unirme ahora</Button>
+        </footer> */}
       </div>
     </section>
   );

@@ -1,36 +1,45 @@
 .testimonies_section {
   width: 100%;
-  margin-top: -25px;
-  padding: 50px 5%;
+  padding: 70px 5%;
   background-color: var(--color-primary);
   border-radius: 25px;
+  margin: -25px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 
   &__max_width {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 
     h2 {
-      font-size: 50px;
+      font-size: 35px;
       font-weight: 500;
       color: white;
       text-align: center;
+      padding: 0 15px;
     }
 
     p {
       font-size: 20px;
+      line-height: 1.4;
       color: white;
       text-align: center;
       text-wrap: pretty;
+      max-width: 650px;
+      padding: 0 10px;
     }
 
     ul {
       columns: 1;
+    }
+
+    footer {
+      scale: 1.1;
     }
   }
 }
@@ -50,12 +59,24 @@
 
 @media (width > 900px) {
   .testimonies_section {
-    padding: 90px 5%;
+    padding: 120px 5%;
     border-radius: 35px;
-    margin-top: -35px;
+    margin: -35px 0 0 0;
 
     &__max_width {
+
+      h2 {
+        font-size: 50px;
+        /* max-width: 400px; */
+      }
+
+      p {
+        font-size: 22px;
+        max-width: 900px;
+      }
+
       ul {
+        margin-top: 50px;
         max-width: 790px;
         gap: 30px;
       }

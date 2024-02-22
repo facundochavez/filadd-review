@@ -20,7 +20,8 @@ const HowItWorksSection = () => {
       description: (
         <p>
           Sigue a otros estudiantes y a referentes de tu carrera para mantenerte
-          al tanto de su contenido compartido.
+          al tanto de su contenido compartido. Te sorprenderá saber cuántas personas
+          que conoces ya están acá.
         </p>
       ),
     },
@@ -70,7 +71,7 @@ const HowItWorksSection = () => {
       <ul className={styles.how_it_works_section__cards}>
         <li>
           <ExplanationCard item={explanationItems[0]} />
-          <picture style={{ minWidth: '400px' }}>
+          <picture style={{ minWidth: '40%' }}>
             <Image
               src='/images/explanation-image1.jpg'
               alt='Illustration'
@@ -83,19 +84,20 @@ const HowItWorksSection = () => {
           <ExplanationCard item={explanationItems[1]} isWhite />
         </li>
         <li>
-          <picture style={{ minWidth: '300px' }}>
+          <picture style={{ minWidth: '250px' }}>
             <Image
               src='/images/explanation-image3.jpg'
               alt='Illustration'
               fill
               objectFit='cover'
+              style={{}}
             />
           </picture>
           <ExplanationCard item={explanationItems[2]} />
         </li>
         <li>
           <ExplanationCard item={explanationItems[3]} isWhite />
-          <picture style={{ minWidth: '350px' }}>
+          <picture style={{ minWidth: '40%' }}>
             <Image
               src='/images/explanation-image4.jpg'
               alt='Illustration'
@@ -108,12 +110,7 @@ const HowItWorksSection = () => {
           <ExplanationCard item={explanationItems[4]} />
         </li>
         <li>
-          <p className={styles.how_it_works_section__asterisk}>
-            * Por defecto tienes desbloqueados los primeros capítulos de todos
-            los cursos. Con tu cuenta Premium tendrás importantes descuentos
-            para acceder a los cursos completos.
-          </p>
-          <picture style={{ minWidth: '500px', minHeight: '300px' }}>
+          <picture style={{ minWidth: '50%', minHeight: '300px' }}>
             <Image
               src='/images/explanation-image5.jpg'
               alt='Illustration'
@@ -121,6 +118,11 @@ const HowItWorksSection = () => {
               objectFit='cover'
             />
           </picture>
+          <p className={styles.how_it_works_section__asterisk}>
+            * Por defecto tienes desbloqueados los primeros capítulos de todos
+            los cursos. Con tu cuenta Premium tendrás importantes descuentos
+            para acceder a los cursos completos.
+          </p>
         </li>
       </ul>
     </section>
