@@ -75,9 +75,9 @@ const { ref8, ref9, ref10 } = useTourContext();
     <section className={styles.how_it_works_section}>
       <h2 ref={ref8}>Cómo funciona Filadd</h2>
       <ul className={styles.how_it_works_section__cards}>
-        <li>
+        <li ref={ref9}>
           <ExplanationCard item={explanationItems[0]} />
-          <picture style={{ minWidth: '40%' }} ref={ref9}>
+          <picture style={{ minWidth: '40%' }}>
             <Image
               src='/images/explanation-image1.jpg'
               alt='Illustration'
