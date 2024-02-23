@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTourContext } from '@/context/tour.context';
 
 const HowItWorksSection = () => {
-const { ref8, ref9, ref10 } = useTourContext();
+  const { ref8, ref9, ref10 } = useTourContext();
 
   const explanationItems = [
     {
@@ -115,7 +115,7 @@ const { ref8, ref9, ref10 } = useTourContext();
         <li>
           <ExplanationCard item={explanationItems[4]} />
         </li>
-        <li>
+        <li ref={ref10}>
           <picture style={{ minWidth: '50%', minHeight: '300px' }}>
             <Image
               src='/images/explanation-image5.jpg'
@@ -124,7 +124,7 @@ const { ref8, ref9, ref10 } = useTourContext();
               objectFit='cover'
             />
           </picture>
-          <p className={styles.how_it_works_section__asterisk} ref={ref10}>
+          <p className={styles.how_it_works_section__asterisk}>
             * Por defecto tienes desbloqueados los primeros capítulos de todos
             los cursos. Con tu cuenta Premium tendrás importantes descuentos
             para acceder a los cursos completos.
