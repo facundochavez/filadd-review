@@ -79,7 +79,7 @@ const Footer = () => {
           ))}
         </div>
       </header>
-      <main>
+      <main ref={ref13}>
         <aside>
           <a href='#'>
             <Image
@@ -107,7 +107,7 @@ const Footer = () => {
             </Button>
           </div>
         </aside>
-        <div ref={ref13}>
+        <div>
           <section>
             <h3>Explorar</h3>
             <ul>
