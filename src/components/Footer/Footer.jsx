@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
-import Button from '@/Components/Button/Button';
+import Button from '../Button/Button';
 import { useModalContext } from '@/context/modal.context';
 import { useTourContext } from '@/context/tour.context';
 
