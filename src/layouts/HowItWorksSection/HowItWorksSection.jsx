@@ -10,7 +10,8 @@ const HowItWorksSection = () => {
       description: (
         <p>
           Crea una cuenta y encuentra rápidamente el material de estudio de tu
-          carrera.
+          carrera. Nuestra plataforma cuenta con más de 50 millones de archivos
+          de todas las universidades del país.
         </p>
       ),
       cta: 'Crear una cuenta ahora',
@@ -20,8 +21,8 @@ const HowItWorksSection = () => {
       description: (
         <p>
           Sigue a otros estudiantes y a referentes de tu carrera para mantenerte
-          al tanto de su contenido compartido. Te sorprenderá saber cuántas personas
-          que conoces ya están acá.
+          al tanto de su contenido compartido. Te sorprenderá saber cuántas
+          personas que conoces ya están acá.
         </p>
       ),
     },
@@ -52,12 +53,12 @@ const HowItWorksSection = () => {
       title: 'Accede a la Academia',
       description: (
         <p>
-          Nuestros cursos virtuales están creados según los programas de
-          estudio específicos de cada facultad. Podrás acceder a ellos* desde
-          cualquier lugar, incluso desde tu móvil con <a>nuestra aplicación.</a>{' '}
-          <br /> <br />
-          Además, tendrás contacto directo con tu profe vía WhatsApp y recibirás un
-          resumen en PDF especialmente diseñado para aprobar la materia.
+          Nuestros cursos virtuales están creados según los programas de estudio
+          específicos de cada facultad. Podrás acceder a ellos* desde cualquier
+          lugar, incluso desde tu móvil con <a>nuestra aplicación.</a> <br />{' '}
+          <br />
+          Además, tendrás contacto directo con tu profe vía WhatsApp y recibirás
+          un resumen en PDF especialmente diseñado para aprobar la materia.
         </p>
       ),
       cta: 'Ir a la Academia',

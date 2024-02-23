@@ -53,3 +53,8 @@ body {
   border-block-start: 1px solid #c9c9c9 !important;
   /* border-block-start-color: #CECECE !important; */ 
 }
+
+
+.ant-drawer-content-wrapper {
+  max-width: min(85%, 300px) !important;
+}

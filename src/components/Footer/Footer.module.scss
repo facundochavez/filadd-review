@@ -25,7 +25,7 @@
       color: white;
     }
 
-    picture {
+    div {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,6 +33,16 @@
       flex-wrap: wrap;
       padding: 0 30px;
       scale: 0.95;
+
+      a {
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
     }
   }
 
@@ -52,13 +62,21 @@
       flex-direction: column;
       gap: 20px;
 
-      picture {
+      a {
         min-width: 180px;
         height: 80px;
         position: relative;
         filter: brightness(10);
         display: flex;
         gap: 15px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
       }
 
       div {
@@ -67,7 +85,6 @@
         flex-direction: row;
         gap: 10px;
         flex-wrap: wrap;
-
       }
     }
 
@@ -108,15 +125,14 @@
           }
         }
 
-        picture {
+        div {
           margin-top: 15px;
           display: flex;
           align-items: center;
           column-gap: 15px;
+          justify-content: flex-start;
 
-          img {
-            cursor: pointer;
-
+          a {
             &:hover {
               opacity: 0.8;
             }
@@ -170,9 +186,7 @@
 
 @media (width > 960px) {
   .footer {
-    
     main {
-
       div {
         justify-content: space-between;
       }
@@ -187,7 +201,7 @@
     margin: -35px 0 0 0;
 
     header {
-      picture {
+      div {
         scale: 1;
       }
     }

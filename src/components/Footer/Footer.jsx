@@ -7,21 +7,25 @@ const Footer = () => {
     {
       name: 'Y Combinator',
       logo: '/icons/logo-y-combinator.svg',
+      href: 'https://www.ycombinator.com/',
       width: 200,
     },
     {
       name: 'Alaya',
       logo: '/icons/logo-alaya.svg',
+      href: 'https://alaya-capital.com/',
       width: 160,
     },
     {
       name: 'Fide',
       logo: '/icons/logo-fide.svg',
+      href: 'https://incubadoracordoba.org.ar/',
       width: 90,
     },
     {
       name: 'Incutex',
       logo: '/icons/logo-incutex.svg',
+      href: 'https://www.incutex.com.ar/',
       width: 160,
     },
   ];
@@ -30,18 +34,22 @@ const Footer = () => {
     {
       name: 'Instagram',
       image: '/icons/icon-instagram.svg',
+      href: 'https://www.instagram.com/filadd_web/',
     },
     {
       name: 'YouTube',
       image: '/icons/icon-youtube.svg',
+      href: 'https://www.youtube.com/channel/UC6PoYEu79xbbUGSM0s38Esg',
     },
     {
       name: 'LinkedIn',
       image: '/icons/icon-linkedin.svg',
+      href: 'https://www.linkedin.com/company/filadd/',
     },
     {
       name: 'WhatsApp',
       image: '/icons/icon-whatsapp.svg',
+      href: 'https://api.whatsapp.com/send?phone=+5493512556089&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...',
     },
   ];
 
@@ -50,32 +58,35 @@ const Footer = () => {
     <footer className={styles.footer}>
       <header>
         <h3>Confían en nosotros:</h3>
-        <picture>
+        <div>
           {sponsors.map((sponsor) => (
-            <Image
-              key={sponsor.name}
-              src={sponsor.logo}
-              alt={'Logo de ' + sponsor.name}
-              width={sponsor.width}
-              height={80}
-              style={{
-                paddingBottom: sponsor.name === 'Fide' ? '10px' : '0',
-                paddingTop: sponsor.name === 'Incutex' ? '10px' : '0',
-              }}
-            />
+            <a key={sponsor.name} href={sponsor.href} target='_blank'>
+              <Image
+                src={sponsor.logo}
+                alt={'Logo de ' + sponsor.name}
+                width={sponsor.width}
+                height={80}
+                style={{
+                  paddingBottom: sponsor.name === 'Fide' ? '10px' : '0',
+                  paddingTop: sponsor.name === 'Incutex' ? '10px' : '0',
+                }}
+              />
+            </a>
           ))}
-        </picture>
+        </div>
       </header>
       <main>
         <aside>
-          <picture>
-            <Image
-              src='/filadd-logo.svg'
-              alt='Logo Filadd'
-              fill
-              objectFit='contain'
-            />
-          </picture>
+
+            <a href='#'>
+              <Image
+                src='/filadd-logo.svg'
+                alt='Logo Filadd'
+                fill
+                objectFit='contain'
+              />
+            </a>
+
           <div>
             <Button type='transparent-white' style={{ width: '100%' }}>
               Ingresar
@@ -111,23 +122,27 @@ const Footer = () => {
               <li>info@filadd.com</li>
               <li>+54 9 351 255-6089</li>
             </ul>
-            <picture>
+            <div>
               {contactItems.map((item) => (
-                <Image
-                  key={item.name}
-                  src={item.image}
-                  alt={'Icono de ' + item.name}
-                  width={35}
-                  height={30}
-                />
+                <a key={item.name} href={item.href} target='_blank'>
+                  <Image
+                    src={item.image}
+                    alt={'Icono de ' + item.name}
+                    width={35}
+                    height={30}
+                  />
+                </a>
               ))}
-            </picture>
+            </div>
           </section>
         </div>
       </main>
       <footer>
         <p>
-         {/*  © Copyright 2024 -  */}Review por <a href='https://www.facundochavez.com/' target='_blank' >Facundo Chavez</a>
+          Review por{' '}
+          <a href='https://www.facundochavez.com/' target='_blank'>
+            Facundo Chavez
+          </a>
         </p>
       </footer>
     </footer>

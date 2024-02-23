@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import styles from './Header.module.scss';
-import { Menu } from 'antd';
+import { Menu, Drawer } from 'antd';
 import CountrySelector from '../CountrySelector/CountrySelector';
 import Button from '../Button/Button';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const navItems = [
     {
       label: 'Inicio',
@@ -27,6 +29,24 @@ const Header = () => {
       key: 'blog',
     },
   ];
+  const allNavItems = [
+    ...navItems,
+    { label: 'Filad Profesional', key: 'profesional' },
+  ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (isSideBarOpen) {
+        setIsSideBarOpen(false);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  },[])
 
   //// COMPONENT
   return (
@@ -64,7 +84,27 @@ const Header = () => {
           <Button style={{ marginLeft: '20px' }}>Registrarme</Button>
           <Button type='primary'>Ingresar</Button>
         </aside>
+        <picture onClick={() => setIsSideBarOpen(true)}>
+          <Image
+            src='/icons/icon-burguer.svg'
+            alt='Icono de hamburguesa'
+            width={28}
+            height={28}
+          />
+        </picture>
       </div>
+
+      <Drawer
+        width={720}
+        open={isSideBarOpen}
+        onClose={() => setIsSideBarOpen(false)}
+        size='small'
+        closable={false}
+        closeIcon={<Image src='/icons/icon-close.svg' alt='Icono de cerrar' width={15} height={15} />
+      }
+      >
+        <Menu items={allNavItems} defaultSelectedKeys={['home']} />
+      </Drawer>
     </nav>
   );
 };
