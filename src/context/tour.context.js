@@ -54,9 +54,9 @@ const TourProvider = ({ children }) => {
       description: (
         <p>
           El Header debe poseer un link a las distintas páginas y hasta dos CTA
-          que se consideren los más importantes (en este caso "Registrarme" e
-          "Ingresar"). Van a notar que cuando están arriba del todo, estos dos
-          CTA se reemplazan por un link a "Filad Profesional", esto es así
+          que se consideren los más importantes (en este caso &quot;Registrarme&quot; e
+          &quot;Ingresar&quot;). Van a notar que cuando están arriba del todo, estos dos
+          CTA se reemplazan por un link a &quot;Filad Profesional&quot;, esto es así
           porque en el Hero se repiten esos CTA y de otra manera seríamos muy
           redundantes.
           <br />
@@ -134,7 +134,7 @@ const TourProvider = ({ children }) => {
       title: 'Estadísticas',
       description: (
         <p>
-          A esta información la traje desde la página actual "Sobre nosotros".
+          A esta información la traje desde la página actual &quot;Sobre nosotros&quot;.
           Me pareció importante que esté aquí como parte de la narrativa de la
           landing.
         </p>
@@ -181,7 +181,7 @@ const TourProvider = ({ children }) => {
       description: (
         <p>
           Es muy importante que esta sección aparezca directamente luego de la
-          sección sobre "Cómo funciona Filadd" para darle legitimidad. Hice un
+          sección sobre &quot;Cómo funciona Filadd&quot; para darle legitimidad. Hice un
           rejunte de los testimonios que ahora tienen en las distintas páginas y
           los completé un poco artificalmente. Sería necesario buscar más
           testimonios y que todos tengan la info completa sobre la universidad y
@@ -199,14 +199,14 @@ const TourProvider = ({ children }) => {
           sección de conversión. Está comprobado de que la mayoría de las
           conversiones se hacen directamente luego de haber leído testimonios,
           así que este es el lugar donde debe aparecer. Como verán no incluí la
-          sección "Cursos de la Academia" en esta landing ya que cortaba con la
+          sección &quot;Cursos de la Academia&quot; en esta landing ya que cortaba con la
           narrativa persuasiva de la misma. Además, ya tenemos la sección
-          siguiente de "Filadd Profesional" como un extra, y siendo esta sección
-          de conversión "el fin de la landing" teóricamente debería ser la
+          siguiente de &quot;Filadd Profesional&quot; como un extra, y siendo esta sección
+          de conversión &quot;el fin de la landing&quot; teóricamente debería ser la
           última antes de que aparezca el Footer. Tener tantos extras al final
           le quita un poco de fuerza a esta sección. De todas maneras, se
           podrían realizar tests A-B para probar cómo funcionaría con la sección
-          de los cursos, o incluso sin la sección de "Filadd Profesional".
+          de los cursos, o incluso sin la sección de &quot;Filadd Profesional&quot;.
         </p>
       ),
       target: () => ref12.current,

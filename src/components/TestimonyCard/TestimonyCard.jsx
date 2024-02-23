@@ -19,7 +19,7 @@ const TestimonyCard = ({ testimony }) => {
           <span>{testimony.career}</span>
         </div>
       </header>
-      <p>"{testimony.text}"</p>
+      <p>&quot;{testimony.text}&quot;</p>
     </div>
   );
 };

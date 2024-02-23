@@ -2,22 +2,23 @@ import styles from './StepsSlider.module.scss';
 import { useStepsContext } from '@/context/steps.context';
 import Image from 'next/image';
 import Button from '../Button/Button';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTourContext } from '@/context/tour.context';
 
 const StepsSlider = () => {
   const { selectedStep, sliderHeight } = useStepsContext();
-  const {ref6} = useTourContext();
+  const { ref6 } = useTourContext();
   const [optionButtonHeight, setOptionButtonHeight] = useState(0);
 
   useEffect(() => {
     const handleOptionButtonHeight = () => {
-      const newOptionButtonHeight = window.innerWidth <= 900 ? 47 : window.innerWidth <= 900 ? 53 : 60;
+      const newOptionButtonHeight =
+        window.innerWidth <= 900 ? 47 : window.innerWidth <= 900 ? 53 : 60;
       setOptionButtonHeight(newOptionButtonHeight);
     };
     handleOptionButtonHeight();
     window.addEventListener('resize', handleOptionButtonHeight);
-  }, []);
+  }, [optionButtonHeight]);
 
   //// COMPONENT
   return (
@@ -88,7 +89,7 @@ const UniversitiesSlide = ({ optionButtonHeight }) => {
             key={university.id}
             mainText={university.abbreviation}
             subText={university.name}
-            disbleFocus={selectedStep !== 1}
+            disableFocus={selectedStep !== 1}
             handleClick={() => handleClick(university)}
           />
         ))}
@@ -153,14 +154,12 @@ const CarrersSlide = ({ optionButtonHeight }) => {
         style={{ height: step2ShowAll ? `${maxHeight}px` : `${minHeight}px` }}
       >
         {careers.map((career) => (
-          <li>
-            <OptionButton
-              key={career.id}
-              mainText={`${career.name} (${selectedUniversityAbbreviation})`}
-              disbleFocus={selectedStep !== 2}
-              handleClick={() => handleClick(career)}
-            />
-          </li>
+          <OptionButton
+            key={career.id}
+            mainText={`${career.name} (${selectedUniversityAbbreviation})`}
+            disableFocus={selectedStep !== 2}
+            handleClick={() => handleClick(career)}
+          />
         ))}
         {careers.length === 0 && (
           <OopsMessage buttonMessage='Sugerir nueva carrera' />
@@ -221,23 +220,18 @@ const SubjectsSlide = ({ optionButtonHeight }) => {
       >
         {subjects.map((group) => {
           return (
-            <li key={group.id}>
-              <ul>
-                <div className={styles.slide__list__group_name}>
-                  <p>{group.name}</p>
-                </div>
-                {group.subjects.map((subject) => (
-                  <li>
-                    <OptionButton
-                      key={subject.id}
-                      subText={subject.name}
-                      disb
-                      leFocus={selectedStep !== 3}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </li>
+            <ul key={group.id}>
+              <div className={styles.slide__list__group_name}>
+                <p>{group.name}</p>
+              </div>
+              {group.subjects.map((subject) => (
+                <OptionButton
+                  key={subject.id}
+                  subText={subject.name}
+                  disableFocus={selectedStep !== 3}
+                />
+              ))}
+            </ul>
           );
         })}
         {length === 0 && <OopsMessage buttonMessage='Sugerir nueva materia' />}
@@ -254,12 +248,12 @@ const SubjectsSlide = ({ optionButtonHeight }) => {
   );
 };
 
-const OptionButton = ({ mainText, subText, disbleFocus, handleClick }) => {
+const OptionButton = ({ mainText, subText, disableFocus, handleClick }) => {
   //// COMPONENT
   return (
     <button
       className={styles.option_button}
-      tabindex={disbleFocus ? -1 : 'unset'}
+      tabindex={disableFocus ? -1 : 'unset'}
       onClick={handleClick}
     >
       <div>
@@ -292,6 +286,7 @@ const ShowAllButton = ({ stepShowAll, handleClick }) => {
     <Button
       type='transparent-white'
       style={{ width: 'fit-content' }}
+      tabindex={-1}
       onClick={() => {
         if (stepShowAll) {
           window.scrollTo({
@@ -301,7 +296,7 @@ const ShowAllButton = ({ stepShowAll, handleClick }) => {
         }
         setTimeout(() => {
           handleClick();
-        }, 50)
+        }, 50);
       }}
     >
       {stepShowAll ? 'Ver menos' : 'Ver todo'}

@@ -79,7 +79,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, sectionRef, setIsHeaderShow]);
 
   //// COMPONENT
   return (
