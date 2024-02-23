@@ -24,7 +24,7 @@ export default function Home() {
           content='Review de la web de Filadd hecha por Facundo Chavez'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property='og:image' content='/filadd-favicon.svg' />
+        <meta property='og:image' content='/filadd-og-image.png' />
         <meta property='og:title' content='Filadd Review' />
         <meta
           property='og:description'
