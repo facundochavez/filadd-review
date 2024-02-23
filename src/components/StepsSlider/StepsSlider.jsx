@@ -3,9 +3,11 @@ import { useStepsContext } from '@/context/steps.context';
 import Image from 'next/image';
 import Button from '../Button/Button';
 import { useEffect, useRef, useState } from 'react';
+import { useTourContext } from '@/context/tour.context';
 
 const StepsSlider = () => {
   const { selectedStep, sliderHeight } = useStepsContext();
+  const {ref6} = useTourContext();
   const [optionButtonHeight, setOptionButtonHeight] = useState(0);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const StepsSlider = () => {
 
   //// COMPONENT
   return (
-    <main className={styles.steps_slider_container}>
+    <main className={styles.steps_slider_container} ref={ref6}>
       <div
         className={styles.steps_slider_container__slider}
         style={{

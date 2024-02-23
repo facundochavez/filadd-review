@@ -1,12 +1,14 @@
-import StatisticCard from "@/components/StatisticCard/StatisticCard";
-import styles from "./StatisticsSection.module.scss";
+import StatisticCard from '@/components/StatisticCard/StatisticCard';
+import styles from './StatisticsSection.module.scss';
+import { useTourContext } from '@/context/tour.context';
 
 const StatisticsSection = () => {
-  
+  const { ref7 } = useTourContext();
+
   //// COMPONENT
   return (
     <section className={styles.statistics_section}>
-      <ul>
+      <ul ref={ref7}>
         <StatisticCard title='Facultades' value='78' />
         <StatisticCard title='Profesores' value='243' />
         <StatisticCard title='Cursos' value='325' />
@@ -15,6 +17,5 @@ const StatisticsSection = () => {
     </section>
   );
 };
-
 
 export default StatisticsSection;

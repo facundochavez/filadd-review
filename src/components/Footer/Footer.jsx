@@ -2,9 +2,11 @@ import Image from 'next/image';
 import styles from './Footer.module.scss';
 import Button from '@/Components/Button/Button';
 import { useModalContext } from '@/context/modal.context';
+import { useTourContext } from '@/context/tour.context';
 
 const Footer = () => {
   const { openModal } = useModalContext();
+  const {ref13} = useTourContext();
   const sponsors = [
     {
       name: 'Y Combinator',
@@ -105,7 +107,7 @@ const Footer = () => {
             </Button>
           </div>
         </aside>
-        <div>
+        <div ref={ref13}>
           <section>
             <h3>Explorar</h3>
             <ul>

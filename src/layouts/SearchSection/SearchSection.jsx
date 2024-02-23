@@ -6,6 +6,8 @@ import { useStepsContext } from '@/context/steps.context';
 
 const SearchSection = () => {
   const { sectionRef } = useStepsContext();
+
+
   //// COMPONENT
   return (
     <section className={styles.search_section} ref={sectionRef}>

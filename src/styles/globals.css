@@ -28,7 +28,6 @@ body {
 
 html {
   scrollbar-gutter: stable;
-
 }
 
 .ant-menu-item::after,
@@ -54,10 +53,10 @@ html {
   color: var(--color-dark-gray) !important;
 }
 
-.ant-divider-with-text::before, 
+.ant-divider-with-text::before,
 .ant-divider-with-text::after {
   border-block-start: 1px solid #c9c9c9 !important;
-  /* border-block-start-color: #CECECE !important; */ 
+  /* border-block-start-color: #CECECE !important; */
 }
 
 .ant-drawer-content-wrapper {
@@ -74,4 +73,14 @@ html {
   height: 0em !important;
   scrollbar-width: none !important;
   display: none !important;
+}
+
+.ant-tour {
+  max-width: 95vw !important;
+}
+
+.ant-tour-arrow::before {
+  clip-path: path(
+    'M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z'
+  ) !important;
 }

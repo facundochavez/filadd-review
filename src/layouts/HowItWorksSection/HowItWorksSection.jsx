@@ -1,9 +1,10 @@
 import ExplanationCard from '@/components/ExplanationCard/ExplanationCard';
 import styles from './HowItWorksSection.module.scss';
 import Image from 'next/image';
+import { useTourContext } from '@/context/tour.context';
 
 const HowItWorksSection = () => {
-
+const { ref8, ref9, ref10 } = useTourContext();
 
   const explanationItems = [
     {
@@ -72,11 +73,11 @@ const HowItWorksSection = () => {
   //// COMPONENT
   return (
     <section className={styles.how_it_works_section}>
-      <h2>Cómo funciona Filadd</h2>
+      <h2 ref={ref8}>Cómo funciona Filadd</h2>
       <ul className={styles.how_it_works_section__cards}>
         <li>
           <ExplanationCard item={explanationItems[0]} />
-          <picture style={{ minWidth: '40%' }}>
+          <picture style={{ minWidth: '40%' }} ref={ref9}>
             <Image
               src='/images/explanation-image1.jpg'
               alt='Illustration'
@@ -123,7 +124,7 @@ const HowItWorksSection = () => {
               objectFit='cover'
             />
           </picture>
-          <p className={styles.how_it_works_section__asterisk}>
+          <p className={styles.how_it_works_section__asterisk} ref={ref10}>
             * Por defecto tienes desbloqueados los primeros capítulos de todos
             los cursos. Con tu cuenta Premium tendrás importantes descuentos
             para acceder a los cursos completos.

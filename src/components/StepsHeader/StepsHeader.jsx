@@ -2,12 +2,14 @@ import Image from 'next/image';
 import styles from './StepsHeader.module.scss';
 import { useStepsContext } from '@/context/steps.context';
 import steps from '@/data/steps.data.json';
+import { useTourContext } from '@/context/tour.context';
 
 const StepsHeader = () => {
+  const {ref4} = useTourContext();
 
   //// COMPONENT
   return (
-    <header className={styles.steps_header}>
+    <header className={styles.steps_header} ref={ref4}>
       {steps.map((step) => (
         <Step key={step.key} step={step} />
       ))}

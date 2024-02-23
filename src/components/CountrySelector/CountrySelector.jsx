@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { Dropdown, Button } from 'antd';
+import { useTourContext } from '@/context/tour.context';
 
 const CountrySelector = () => {
+  const { ref1 } = useTourContext();
   const countries = [
     {
       label: 'Argentina',
@@ -69,12 +71,13 @@ const CountrySelector = () => {
       }}
     >
       <Button
+        ref={ref1}
         type='text'
         size='large'
         style={{
           padding: 10,
           display: 'flex',
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       >
         <Image

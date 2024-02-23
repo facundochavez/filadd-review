@@ -3,8 +3,10 @@ import { ConfigProvider } from 'antd';
 import StepsProvider from '@/context/steps.context';
 import ModalProvider from '@/context/modal.context';
 import LoginRegisterModal from '@/components/LoginRegisterModal/LoginRegisterModal';
+import TourProvider from '@/context/tour.context';
 
 export default function App({ Component, pageProps }) {
+
   return (
     <ConfigProvider
       theme={{
@@ -14,12 +16,14 @@ export default function App({ Component, pageProps }) {
         },
       }}
     >
-      <ModalProvider>
-        <StepsProvider>
-          <LoginRegisterModal />
-          <Component {...pageProps} />
-        </StepsProvider>
-      </ModalProvider>
+      <TourProvider>
+        <ModalProvider>
+          <StepsProvider>
+            <Component {...pageProps} />
+            <LoginRegisterModal />
+          </StepsProvider>
+        </ModalProvider>
+      </TourProvider>
     </ConfigProvider>
   );
 }

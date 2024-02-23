@@ -1,16 +1,85 @@
 .review_section {
   width: 100%;
-  padding: 70px 5%;
+  padding: 70px 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
   background-color: Black;
+
+  &__max_width {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    picture {
+      width: 180px;
+      height: 180px;
+      min-width: 180px;
+      position: relative;
+      border-radius: 50%;
+      contain: paint;
+
+      img {
+        scale: 1.05;
+      }
+    }
+
+    div {
+      p {
+        color: white;
+        font-size: 23px;
+
+        span {
+          font-style: italic;
+        }
+      }
+
+      footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 40px;
+
+        div,
+        aside {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+
+          button {
+            width: 200px;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          a {
+            &:hover {
+              opacity: 0.85;
+            }
+            &:active {
+              opacity: 0.75;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (width > 900px) {
   .review_section {
     padding: 120px 5%;
     gap: 60px;
+
+    &__max_width {
+      flex-direction: row;
+    }
   }
 }

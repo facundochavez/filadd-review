@@ -1,4 +1,3 @@
-import LoginRegisterModal from "@/components/LoginRegisterModal/LoginRegisterModal";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {

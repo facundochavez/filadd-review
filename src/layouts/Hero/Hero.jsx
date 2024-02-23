@@ -1,12 +1,15 @@
 import Button from '@/components/Button/Button';
 import styles from './Hero.module.scss';
 import { useModalContext } from '@/context/modal.context';
+import { useTourContext } from '@/context/tour.context';
 
 const Hero = () => {
   const { openModal } = useModalContext();
+  const {ref3} = useTourContext();
+
   //// COMPONENT
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} ref={ref3}>
       <div className={styles.hero__background} />
       <main>
         <h1>Todo lo que necesitas para aprobar tus materias</h1>

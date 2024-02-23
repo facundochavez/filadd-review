@@ -6,14 +6,15 @@ import Button from '../Button/Button';
 import { useEffect, useState } from 'react';
 import { useModalContext } from '@/context/modal.context';
 import { useStepsContext } from '@/context/steps.context';
+import { useTourContext } from '@/context/tour.context';
 
 const Header = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const [isHeaderShow, setIsHeaderShow] = useState(true);
   const [isShowButtons, setIsShowButtons] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { openModal } = useModalContext();
   const { sectionRef } = useStepsContext();
+  const { isHeaderShow, setIsHeaderShow, ref0, ref2 } = useTourContext();
 
   const navItems = [
     {
@@ -67,10 +68,7 @@ const Header = () => {
       }
       setLastScrollY(window.scrollY);
 
-      if (
-        window.scrollY >=
-        sectionRef.current.offsetTop + 500
-      ) {
+      if (window.scrollY >= sectionRef.current.offsetTop + 500) {
         setIsShowButtons(true);
       } else {
         setIsShowButtons(false);
@@ -89,9 +87,10 @@ const Header = () => {
       className={styles.header}
       style={{ translate: isHeaderShow ? '0 0' : '0 -100%' }}
     >
-      <div className={styles.header__max_width}>
+      <div className={styles.header__max_width} ref={ref2}>
         <header className={styles.logo_and_country}>
           <Image
+            ref={ref0}
             src='/filadd-logo.svg'
             alt='Filadd Logo'
             width={130}

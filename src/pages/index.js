@@ -9,10 +9,12 @@ import TestimoniesSection from '@/layouts/TestimoniesSection/TestimoniesSection'
 import RegisterSection from '@/layouts/RegisterSection/RegisterSection';
 import ProfessionalSection from '@/layouts/ProfessionalSection/ProfessionalSection';
 import Footer from '@/components/Footer/Footer';
-import LoginRegisterModal from '@/components/LoginRegisterModal/LoginRegisterModal';
 import ReviewSection from '@/layouts/ReviewSection/ReviewSection';
+import { Tour } from 'antd';
+import { useTourContext } from '@/context/tour.context';
 
 export default function Home() {
+  const { tourIsActive, setTourIsActive, steps } = useTourContext();
   return (
     <>
       <Head>
@@ -35,6 +37,12 @@ export default function Home() {
         <ProfessionalSection />
         <Footer />
         <ReviewSection />
+        <Tour
+          open={tourIsActive}
+          onClose={() => setTourIsActive(false)}
+          steps={steps}
+          nextButtonProps={{size:'large'}}
+        />
       </main>
     </>
   );

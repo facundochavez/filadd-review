@@ -3,6 +3,7 @@ import styles from './StepsInput.module.scss';
 import Image from 'next/image';
 import { useStepsContext } from '@/context/steps.context';
 import steps from '@/data/steps.data.json';
+import { useTourContext } from '@/context/tour.context';
 
 
 const StepsInput = () => {
@@ -15,6 +16,7 @@ const StepsInput = () => {
     inputValue,
     setInputValue,
   } = useStepsContext();
+  const {ref5} = useTourContext();
 
 
   // BREADCRUMB ITEMS
@@ -38,7 +40,7 @@ const StepsInput = () => {
 
   //// COMPONENT
   return (
-    <div className={styles.steps_input}>
+    <div className={styles.steps_input} ref={ref5}>
       <label>{steps[selectedStep - 1]?.question}</label>
       <Input
         type='text'
