@@ -1,6 +1,6 @@
 .professional_section {
   width: 100%;
-  padding: 70px 5%;
+  padding: 80px 5% 120px 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@
 
 @media (width > 900px) {
   .professional_section {
-    padding: 120px 5%;
+    padding: 120px 5% 180px 5%;
     gap: 60px;
 
     h2 {
