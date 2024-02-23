@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import Button from '@/Components/Button/Button';
+import { useModalContext } from '@/context/modal.context';
 
 const Footer = () => {
+  const { openModal } = useModalContext();
   const sponsors = [
     {
       name: 'Y Combinator',
@@ -77,21 +79,28 @@ const Footer = () => {
       </header>
       <main>
         <aside>
-
-            <a href='#'>
-              <Image
-                src='/filadd-logo.svg'
-                alt='Logo Filadd'
-                fill
-                objectFit='contain'
-              />
-            </a>
+          <a href='#'>
+            <Image
+              src='/filadd-logo.svg'
+              alt='Logo Filadd'
+              fill
+              objectFit='contain'
+            />
+          </a>
 
           <div>
-            <Button type='transparent-white' style={{ width: '100%' }}>
+            <Button
+              type='transparent-white'
+              style={{ width: '100%' }}
+              onClick={() => openModal('login')}
+            >
               Ingresar
             </Button>
-            <Button type='primary-white' style={{ width: '100%' }}>
+            <Button
+              type='primary-white'
+              style={{ width: '100%' }}
+              onClick={() => openModal('register')}
+            >
               Registrarme
             </Button>
           </div>

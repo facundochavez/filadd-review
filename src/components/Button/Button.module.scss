@@ -58,6 +58,10 @@
   color: var(--color-primary) !important;
   &:hover {
     color: var(--color-primary-hover) !important;
+
+    span {
+      text-decoration: underline !important;
+    }
   }
   &:active {
     color: var(--color-primary-active) !important;

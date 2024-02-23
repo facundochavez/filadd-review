@@ -1,7 +1,9 @@
 import Button from '@/components/Button/Button';
 import styles from './Hero.module.scss';
+import { useModalContext } from '@/context/modal.context';
 
 const Hero = () => {
+  const { openModal } = useModalContext();
   //// COMPONENT
   return (
     <section className={styles.hero}>
@@ -14,10 +16,11 @@ const Hero = () => {
         </p>
       </main>
       <footer>
-        <Button >Registrarme</Button>
+        <Button onClick={() => openModal('register')}>Registrarme</Button>
         <Button
           type='primary'
           style={{ paddingLeft: '35px', paddingRight: '35px' }}
+          onClick={() => openModal('login')}
         >
           Ingresar
         </Button>

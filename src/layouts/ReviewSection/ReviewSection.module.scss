@@ -1,0 +1,16 @@
+.review_section {
+  width: 100%;
+  padding: 70px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-color: Black;
+}
+
+@media (width > 900px) {
+  .review_section {
+    padding: 120px 5%;
+    gap: 60px;
+  }
+}

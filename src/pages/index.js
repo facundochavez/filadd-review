@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
+import Head from 'next/head';
 import Header from '@/components/Header/Header';
 import Hero from '@/layouts/Hero/Hero';
 import SearchSection from '@/layouts/SearchSection/SearchSection';
@@ -9,6 +9,8 @@ import TestimoniesSection from '@/layouts/TestimoniesSection/TestimoniesSection'
 import RegisterSection from '@/layouts/RegisterSection/RegisterSection';
 import ProfessionalSection from '@/layouts/ProfessionalSection/ProfessionalSection';
 import Footer from '@/components/Footer/Footer';
+import LoginRegisterModal from '@/components/LoginRegisterModal/LoginRegisterModal';
+import ReviewSection from '@/layouts/ReviewSection/ReviewSection';
 
 export default function Home() {
   return (
@@ -22,8 +24,8 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/filadd-favicon.svg' />
       </Head>
-      <Header />
       <main className={`${styles.main}`}>
+        <Header />
         <Hero />
         <SearchSection />
         <StatisticsSection />
@@ -32,6 +34,7 @@ export default function Home() {
         <RegisterSection />
         <ProfessionalSection />
         <Footer />
+        <ReviewSection />
       </main>
     </>
   );

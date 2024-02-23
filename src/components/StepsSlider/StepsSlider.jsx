@@ -45,7 +45,6 @@ const UniversitiesSlide = ({ optionButtonHeight }) => {
     setStep1ShowAll,
     universities,
     setSliderHeight,
-    sectionRef,
   } = useStepsContext();
 
   const minHeight =
@@ -117,7 +116,6 @@ const CarrersSlide = ({ optionButtonHeight }) => {
     setStep2ShowAll,
     careers,
     setSliderHeight,
-    sectionRef,
   } = useStepsContext();
 
   const minHeight =
@@ -295,7 +293,7 @@ const ShowAllButton = ({ stepShowAll, handleClick }) => {
       onClick={() => {
         if (stepShowAll) {
           window.scrollTo({
-            top: sectionRef.current.offsetTop - 80,
+            top: sectionRef.current.offsetTop,
             behavior: 'smooth',
           });
         }

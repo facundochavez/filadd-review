@@ -22,7 +22,13 @@
 html,
 body {
   max-width: 100vw;
+  min-width: 100%;
   overflow-x: hidden;
+}
+
+html {
+  scrollbar-gutter: stable;
+
 }
 
 .ant-menu-item::after,
@@ -35,7 +41,7 @@ body {
 .ant-menu {
   border: none !important;
   font-size: 16px !important;
-  line-height: 81px !important;
+  line-height: 90px !important;
   user-select: none !important;
   background-color: transparent !important;
 }
@@ -54,7 +60,18 @@ body {
   /* border-block-start-color: #CECECE !important; */ 
 }
 
-
 .ant-drawer-content-wrapper {
   max-width: min(85%, 300px) !important;
+}
+
+.ant-modal-mask {
+  backdrop-filter: blur(5px);
+  overflow: hidden !important;
+}
+
+.ant-modal-wrap::-webkit-scrollbar {
+  width: 0em !important;
+  height: 0em !important;
+  scrollbar-width: none !important;
+  display: none !important;
 }

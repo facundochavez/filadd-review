@@ -38,7 +38,7 @@ const StepsProvider = ({ children }) => {
     setTimeout(() => {
       if (sectionRef.current) {
         window.scrollTo({
-          top: sectionRef.current.offsetTop - 80,
+          top: sectionRef.current.offsetTop,
           behavior: 'smooth',
         });
       }

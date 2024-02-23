@@ -1,9 +1,10 @@
 import ExplanationCard from '@/components/ExplanationCard/ExplanationCard';
 import styles from './HowItWorksSection.module.scss';
 import Image from 'next/image';
-import Button from '@/components/Button/Button';
 
 const HowItWorksSection = () => {
+
+
   const explanationItems = [
     {
       title: 'Comienza gratis',
@@ -37,6 +38,7 @@ const HowItWorksSection = () => {
         </p>
       ),
       cta: 'Subir archivos',
+      withArrow: true,
     },
     {
       title: 'Hazte Premium',
@@ -48,6 +50,7 @@ const HowItWorksSection = () => {
         </p>
       ),
       cta: 'Ver planes',
+      withArrow: true,
     },
     {
       title: 'Accede a la Academia',
@@ -62,6 +65,7 @@ const HowItWorksSection = () => {
         </p>
       ),
       cta: 'Ir a la Academia',
+      withArrow: true,
     },
   ];
 

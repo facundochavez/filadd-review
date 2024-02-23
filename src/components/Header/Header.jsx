@@ -4,9 +4,17 @@ import { Menu, Drawer } from 'antd';
 import CountrySelector from '../CountrySelector/CountrySelector';
 import Button from '../Button/Button';
 import { useEffect, useState } from 'react';
+import { useModalContext } from '@/context/modal.context';
+import { useStepsContext } from '@/context/steps.context';
 
 const Header = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+  const [isHeaderShow, setIsHeaderShow] = useState(true);
+  const [isShowButtons, setIsShowButtons] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const { openModal } = useModalContext();
+  const { sectionRef } = useStepsContext();
+
   const navItems = [
     {
       label: 'Inicio',
@@ -36,27 +44,57 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (isSideBarOpen) {
-        setIsSideBarOpen(false);
-      }
-    }
-
+      setIsSideBarOpen(false);
+    };
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
-    }
-  },[])
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY <= sectionRef.current.offsetTop - 100) {
+        setIsHeaderShow(true);
+      } else if (
+        window.scrollY <=
+          sectionRef.current.offsetTop + sectionRef.current.offsetHeight ||
+        window.scrollY > lastScrollY
+      ) {
+        setIsHeaderShow(false);
+      } else {
+        setIsHeaderShow(true);
+      }
+      setLastScrollY(window.scrollY);
+
+      if (
+        window.scrollY >=
+        sectionRef.current.offsetTop + 500
+      ) {
+        setIsShowButtons(true);
+      } else {
+        setIsShowButtons(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   //// COMPONENT
   return (
-    <nav className={styles.header}>
+    <nav
+      className={styles.header}
+      style={{ translate: isHeaderShow ? '0 0' : '0 -100%' }}
+    >
       <div className={styles.header__max_width}>
         <header className={styles.logo_and_country}>
           <Image
             src='/filadd-logo.svg'
             alt='Filadd Logo'
-            width={110}
+            width={130}
             height={60}
             style={{ cursor: 'pointer' }}
           />
@@ -71,18 +109,30 @@ const Header = () => {
           />
         </main>
         <aside className={styles.buttons}>
-          {/*           <Button type='link' size='large' styles={{ color: '#2929FA' }}>
-            Filadd Profesional{' '}
-            <Image
-              src='/icons/arrow-right.svg'
-              alt='Arrow Right'
-              width={10}
-              height={10}
-              style={{ marginLeft: 5 }}
-            />{' '}
-          </Button> */}
-          <Button style={{ marginLeft: '20px' }}>Registrarme</Button>
-          <Button type='primary'>Ingresar</Button>
+          {isShowButtons ? (
+            <>
+              <Button
+                style={{ marginLeft: '20px' }}
+                onClick={() => openModal('register')}
+              >
+                Registrarme
+              </Button>
+              <Button type='primary' onClick={() => openModal('login')}>
+                Ingresar
+              </Button>
+            </>
+          ) : (
+            <Button type='link' size='large' styles={{ color: '#2929FA' }}>
+              Filadd Profesional{' '}
+              <Image
+                src='/icons/arrow-right.svg'
+                alt='Arrow Right'
+                width={10}
+                height={10}
+                style={{ marginLeft: 5 }}
+              />{' '}
+            </Button>
+          )}
         </aside>
         <picture onClick={() => setIsSideBarOpen(true)}>
           <Image
@@ -95,15 +145,39 @@ const Header = () => {
       </div>
 
       <Drawer
-        width={720}
         open={isSideBarOpen}
         onClose={() => setIsSideBarOpen(false)}
-        size='small'
         closable={false}
-        closeIcon={<Image src='/icons/icon-close.svg' alt='Icono de cerrar' width={15} height={15} />
-      }
       >
         <Menu items={allNavItems} defaultSelectedKeys={['home']} />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+            marginTop: '20px',
+          }}
+        >
+          <Button
+            onClick={() => {
+              setIsSideBarOpen(false);
+              openModal('register');
+            }}
+            style={{ width: '100%' }}
+          >
+            Registrarme
+          </Button>
+          <Button
+            type='primary'
+            onClick={() => {
+              setIsSideBarOpen(false);
+              openModal('login');
+            }}
+            style={{ width: '100%' }}
+          >
+            Ingresar
+          </Button>
+        </div>
       </Drawer>
     </nav>
   );

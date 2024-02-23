@@ -21,7 +21,16 @@ const ProfessionalSection = () => {
         Capacítate con clases en vivo certificadas y adquiere competencias
         reales para el mundo laboral.
       </p>
-      <Button type='transparent-white'>Más información</Button>
+      <Button type='transparent-white'>
+        Más información{' '}
+        <Image
+          src='/icons/arrow-right.svg'
+          alt='Arrow Right'
+          width={10}
+          height={10}
+          style={{ marginLeft: 10, filter: 'brightness(10)' }}
+        />
+      </Button>
     </section>
   );
 };

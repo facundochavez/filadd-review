@@ -1,6 +1,8 @@
 import '@/styles/globals.css';
 import { ConfigProvider } from 'antd';
 import StepsProvider from '@/context/steps.context';
+import ModalProvider from '@/context/modal.context';
+import LoginRegisterModal from '@/components/LoginRegisterModal/LoginRegisterModal';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -12,9 +14,12 @@ export default function App({ Component, pageProps }) {
         },
       }}
     >
-      <StepsProvider>
-        <Component {...pageProps} />
-      </StepsProvider>
+      <ModalProvider>
+        <StepsProvider>
+          <LoginRegisterModal />
+          <Component {...pageProps} />
+        </StepsProvider>
+      </ModalProvider>
     </ConfigProvider>
   );
 }

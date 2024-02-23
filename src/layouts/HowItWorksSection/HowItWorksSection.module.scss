@@ -46,10 +46,10 @@
   }
 
   &__asterisk {
-    font-size: 15px;
+    font-size: 18px;
     padding: 0 10px;
     color: var(--color-primary);
-    max-width: 500px;
+    text-wrap: pretty;
   }
 }
 
@@ -75,7 +75,7 @@
     }
 
     &__asterisk {
-      font-size: 22px;
+      font-size: 25px;
       line-height: 1.4;
       color: #494949;
       background-color: rgba(0, 0, 0, 0.1);
