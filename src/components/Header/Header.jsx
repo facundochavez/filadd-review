@@ -22,6 +22,10 @@ const Header = () => {
       key: 'home',
     },
     {
+      label: 'Academia',
+      key: 'academy',
+    },
+    {
       label: 'Nosotros',
       key: 'about-us',
     },

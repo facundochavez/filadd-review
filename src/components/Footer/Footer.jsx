@@ -112,6 +112,7 @@ const Footer = () => {
             <h3>Explorar</h3>
             <ul>
               <li>Inicio</li>
+              <li>Academia</li>
               <li>Nosotros</li>
               <li>Preguntas frecuentes</li>
               <li>Contacto</li>

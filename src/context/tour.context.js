@@ -29,12 +29,12 @@ const TourProvider = ({ children }) => {
       title: 'Información de la landing',
       description: (
         <p>
-          Unifiqué en esta landing la información dada en filadd.com y
-          filadd.com/academia. Ambas son páginas que explican cosas esenciales
-          del servicio y el usuario debería poder acceder a ellas desde un
-          principio. Si el seccionamiento fue necesario por una cuestión
-          técnica, se puede encarar el diseño de la página Academia desde un
-          punto de vista más técnico y no tan comunicacional.
+          He consolidado en esta landing la información que se encuentra
+          actualmente dispersa entre filadd.com y filadd.com/academia. Ambas
+          páginas explican aspectos fundamentales del servicio, y es crucial que
+          los usuarios puedan acceder a esta información desde el Inicio. La
+          landing de la Academia debe estar destinada a proporcionar detalles
+          más exclusivos y detallados sobre los cursos.
         </p>
       ),
       target: () => ref0.current,
@@ -54,21 +54,21 @@ const TourProvider = ({ children }) => {
       description: (
         <p>
           El Header debe poseer un link a las distintas páginas y hasta dos CTA
-          que se consideren los más importantes (en este caso &quot;Registrarme&quot; e
-          &quot;Ingresar&quot;). Van a notar que cuando están arriba del todo, estos dos
-          CTA se reemplazan por un link a &quot;Filad Profesional&quot;, esto es así
-          porque en el Hero se repiten esos CTA y de otra manera seríamos muy
-          redundantes.
+          que se consideren los más importantes (en este caso
+          &quot;Registrarme&quot; e &quot;Ingresar&quot;). Van a notar que
+          cuando están arriba del todo, estos dos CTA se reemplazan por un link
+          a &quot;Filad Profesional&quot;, esto es así porque en el Hero se
+          repiten esos CTA y de otra manera seríamos muy redundantes.
           <br />
           Los links siempre deben ser visibles a menos que no quepan en el
           viewport y sólo en ese caso se deben resumir en un sidebar. Sería muy
           importante tratar de unificar el diseño de todas estas páginas
-          (Nosotros, Preguntas Frecuentes, etc.) con en diseño y estructura del
-          Inicio (por lo menos mismo Header y mismo Footer), y que no se linkee
-          a aplicaciones de terceros como Notion. Esto va a permitir dar la
-          impresión de un producto más homogéneo y sólido, lo que se traduce en
-          mayor confianza para crearse una cuenta y pagar por el servicio.{' '}
-          <br />
+          (Academia, Nosotros, Preguntas Frecuentesetc, incluso Políticas de
+          Privacidad) con en diseño y estructura del Inicio (por lo menos mismo
+          Header y mismo Footer), y que no se linkee a aplicaciones de terceros
+          como Notion. Esto va a permitir dar la impresión de un producto más
+          homogéneo y sólido, lo que se traduce en mayor confianza para crearse
+          una cuenta y pagar por el servicio. <br />
           Las páginas que tengan mucho copywrite y requieran actualizarse
           continuamente (como Preguntas Frecuentes) se pueden desarrollar con la
           misma tecnología que el Inicio y que los copywriters manejen su
@@ -118,14 +118,15 @@ const TourProvider = ({ children }) => {
       title: 'Lista de opciones',
       description: (
         <p>
-          Si la información de una lista no comprende imágenes o más información
-          además del título, no se justifica la utilización de tarjetas (items
-          en línea son más que suficientes). No utilizaría un orden alfabético
-          sino ponderado en la lista de universidades (las más importantes o más
-          buscadas irían primero). También se puede tener en cuenta la ubicación
-          del usuario (posterior a solicitar permiso) para esta ponderación. Es
-          importante también reducir la cantidad de items que pueden verse de
-          primera mano, aplicando el botón de “Ver todo”.
+          Si la información de una lista no comprende imágenes o información más
+          allá de un título y una descripción, no se justifica la utilización de
+          tarjetas y los items en línea son más que suficientes. No utilizaría
+          un orden alfabético sino ponderado en la lista de universidades (las
+          más importantes o más buscadas irían primero). También se puede tener
+          en cuenta la ubicación del usuario (posterior a solicitar permiso)
+          para esta ponderación. Es importante también reducir la cantidad de
+          items que pueden verse de primera mano, aplicando el botón de “Ver
+          todo”.
         </p>
       ),
       target: () => ref6.current,
@@ -134,9 +135,9 @@ const TourProvider = ({ children }) => {
       title: 'Estadísticas',
       description: (
         <p>
-          A esta información la traje desde la página actual &quot;Sobre nosotros&quot;.
-          Me pareció importante que esté aquí como parte de la narrativa de la
-          landing.
+          A esta información la traje desde la página actual &quot;Sobre
+          nosotros&quot;. Me pareció importante que esté aquí como parte de la
+          narrativa de la landing.
         </p>
       ),
       target: () => ref7.current,
@@ -145,9 +146,11 @@ const TourProvider = ({ children }) => {
       title: 'Sección',
       description: (
         <p>
-          Para generar esta sección reuní la información de varias páginas que
-          existen ahora. Es muy importante que quede en claro de la forma más
-          íntegra posible cómo funciona la aplicación.
+          Para generar esta sección reuní la información de varias páginas
+          actuales, incluso algunas a las que no se puede acceder sin haber
+          creado una cuenta. Es muy importante que quede en claro, de la forma
+          más íntegra posible, cómo funciona la aplicación en la página de
+          Inicio.
         </p>
       ),
       target: () => ref8.current,
@@ -157,7 +160,7 @@ const TourProvider = ({ children }) => {
       description: (
         <p>
           No soy fan de las fotografías de stock, pero es importante tener fotos
-          en la landing y esta es la sección ideal para ello. Se puede hacer una
+          en la landing y esta es la sección ideal para eso. Se puede hacer una
           producción propia o comprar una serie de fotografías coherentes entre
           sí que parezcan más naturales.
         </p>
@@ -169,7 +172,7 @@ const TourProvider = ({ children }) => {
       description: (
         <p>
           Acá la flashié un poco, pero me parece importante dejar en claro que
-          hacerse Premium no involucra tener acceso directo a todos los cursos
+          hacerse Premium no involucra tener acceso directo a todos los cursos,
           sino que hay que pagar por cada uno de ellos. Esta es una manera de
           decirlo sin decirlo, pero se puede optar por otras formas.
         </p>
@@ -181,12 +184,11 @@ const TourProvider = ({ children }) => {
       description: (
         <p>
           Es muy importante que esta sección aparezca directamente luego de la
-          sección sobre &quot;Cómo funciona Filadd&quot; para darle legitimidad. Hice un
-          rejunte de los testimonios que ahora tienen en las distintas páginas y
-          los completé un poco artificalmente. Sería necesario buscar más
-          testimonios y que todos tengan la info completa sobre la universidad y
-          carrera de la persona. Deben ser testimonios reales y linkearse a los
-          perfiles.
+          sección sobre &quot;Cómo funciona Filadd&quot; para darle legitimidad
+          a la misma. Reuní los testimonios que ahora tienen en las distintas
+          páginas y los completé un poco artificalmente. Sería necesario buscar
+          más testimonios reales, con links a los perfiles, y que todos tengan
+          la info completa sobre la universidad y carrera de la persona.
         </p>
       ),
       target: () => ref11.current,
@@ -195,18 +197,18 @@ const TourProvider = ({ children }) => {
       title: 'Conversión',
       description: (
         <p>
-          Toda la página debe estar estructurada con el fin de llegar a esta
-          sección de conversión. Está comprobado de que la mayoría de las
-          conversiones se hacen directamente luego de haber leído testimonios,
-          así que este es el lugar donde debe aparecer. Como verán no incluí la
-          sección &quot;Cursos de la Academia&quot; en esta landing ya que cortaba con la
-          narrativa persuasiva de la misma. Además, ya tenemos la sección
-          siguiente de &quot;Filadd Profesional&quot; como un extra, y siendo esta sección
-          de conversión &quot;el fin de la landing&quot; teóricamente debería ser la
-          última antes de que aparezca el Footer. Tener tantos extras al final
-          le quita un poco de fuerza a esta sección. De todas maneras, se
-          podrían realizar tests A-B para probar cómo funcionaría con la sección
-          de los cursos, o incluso sin la sección de &quot;Filadd Profesional&quot;.
+          Toda la estructura de la página está diseñada para dirigir a los
+          usuarios hacia esta sección de conversión. La mayoría de las
+          conversiones ocurren después de leer testimonios, por lo que este es
+          el lugar estratégico. Notarán que no incluí la sección &quot;Cursos de
+          la Academia&quot; en esta landing, ya que interrumpía la narrativa
+          persuasiva. Además, la siguiente sección, &quot;Filadd
+          Profesional&quot;, ya actúa como un elemento adicional, y
+          teóricamente, la sección de conversión debería ser la última antes de
+          llegar al Footer. Tener tantos elementos adicionales al final podría
+          restarle fuerza a esta sección. No obstante, se pueden realizar
+          pruebas A-B para evaluar cómo funcionaría con la sección de cursos o
+          incluso sin la de &quot;Filadd Profesional&quot;.
         </p>
       ),
       target: () => ref12.current,
@@ -226,7 +228,7 @@ const TourProvider = ({ children }) => {
       title: '¡Nos vemos!',
       description: (
         <p>
-          Y hasta aquí por ahora. Como les dije, tengo un puñado más de cosas
+          Y hasta aquí por ahora. Como les conté, tengo un puñado más de cosas
           que me gustaría compartirles. ¡Espero verlos pronto!
         </p>
       ),
@@ -255,7 +257,7 @@ const TourProvider = ({ children }) => {
     } else {
       document.documentElement.style.overflow = 'auto';
     }
-  }, [tourIsActive])
+  }, [tourIsActive]);
 
   //// COMPONENT
   return (
