@@ -23,6 +23,7 @@ const LoginRegisterModal = () => {
   //// COMPONENT
   return (
     <Modal
+      wrapClassName={styles.tour}
       open={isModalOpen}
       onOk={closeModal}
       onCancel={closeModal}
@@ -34,7 +35,7 @@ const LoginRegisterModal = () => {
         items={items}
         size='large'
         activeKey={activeKey}
-        onChange={key => openModal(key)}
+        onChange={(key) => openModal(key)}
       >
         <RegisterForm />
       </Tabs>

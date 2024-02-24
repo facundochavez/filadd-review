@@ -69,7 +69,7 @@ const LoginForm = () => {
             size='large'
           />
         </Form.Item>
-        <Button type='primary' style={{ width: '100%', marginTop: '15px' }}>
+        <Button type='primary' style={{ width: '100%', marginTop: '10px' }}>
           Ingresar
         </Button>
       </Form>

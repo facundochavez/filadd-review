@@ -63,6 +63,16 @@ html {
   max-width: min(85%, 300px) !important;
 }
 
+  .ant-modal {
+    top: unset !important;
+  }
+
+/* .ant-modal-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+} */
+
 .ant-modal-mask {
   backdrop-filter: blur(5px);
   overflow: hidden !important;

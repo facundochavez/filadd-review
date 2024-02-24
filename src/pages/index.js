@@ -47,7 +47,6 @@ export default function Home() {
           open={tourIsActive}
           onClose={() => setTourIsActive(false)}
           steps={steps}
-          nextButtonProps={{ size: 'large' }}
         />
       </main>
     </>
