@@ -81,7 +81,7 @@ const LoginForm = () => {
           height={10}
           style={{ rotate: '180deg' }}
         />{' '}
-        No tengo una cuenta
+        Crear una cuenta
       </p>
     </div>
   );
