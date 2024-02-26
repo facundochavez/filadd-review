@@ -139,7 +139,7 @@ const Header = () => {
         </aside>
         <picture onClick={() => setIsSideBarOpen(true)}>
           <Image
-            src='/icons/icon-burguer.svg'
+            src='/icons/icon-burger.svg'
             alt='Icono de hamburguesa'
             width={28}
             height={28}
