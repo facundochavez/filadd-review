@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { Dropdown, Button } from 'antd';
 import { useTourContext } from '@/context/tour.context';
+import { useEffect, useRef, useState } from 'react';
 
 const CountrySelector = () => {
   const { ref1 } = useTourContext();
-  const countries = [
+  const countriesItems = [
     {
       label: 'Argentina',
       key: 'arg',
@@ -61,11 +62,27 @@ const CountrySelector = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const buttonElement = ref1?.current;
+      if (buttonElement && buttonElement.classList.contains('ant-dropdown-open')) {
+        buttonElement.click();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [ref1]);
+
+
   //// COMPONENT
   return (
     <Dropdown
       menu={{
-        items: countries,
+        items: countriesItems,
         selectable: false,
         defaultSelectedKeys: ['arg'],
       }}
