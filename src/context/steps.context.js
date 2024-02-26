@@ -37,8 +37,9 @@ const StepsProvider = ({ children }) => {
 
     setTimeout(() => {
       if (sectionRef.current) {
+        const marginTop = window.innerWidth <= 900 ? 30 : 50;
         window.scrollTo({
-          top: sectionRef.current.offsetTop,
+          top: sectionRef.current.offsetTop + marginTop,
           behavior: 'smooth',
         });
       }
