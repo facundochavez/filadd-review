@@ -5,7 +5,7 @@ import { useTourContext } from '@/context/tour.context';
 
 const ReviewSection = () => {
   const { startTour } = useTourContext();
-  const { ref14 } = useTourContext();
+  const { ref15 } = useTourContext();
   const contactItems = [
     {
       name: 'LinkedIn',
@@ -68,7 +68,7 @@ const ReviewSection = () => {
               <a
                 href='https://www.facundochavez.com/'
                 target='_blank'
-                ref={ref14}
+                ref={ref15}
               >
                 <Button type='transparent-white'>
                   Mi portfolio{' '}

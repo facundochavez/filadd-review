@@ -6,7 +6,7 @@ import { useTourContext } from '@/context/tour.context';
 
 const Footer = () => {
   const { openModal } = useModalContext();
-  const {ref13} = useTourContext();
+  const { ref13, ref14 } = useTourContext();
   const sponsors = [
     {
       name: 'Y Combinator',
@@ -64,7 +64,12 @@ const Footer = () => {
         <h3>Confían en nosotros:</h3>
         <div>
           {sponsors.map((sponsor) => (
-            <a key={sponsor.name} href={sponsor.href} target='_blank'>
+            <a
+              key={sponsor.name}
+              href={sponsor.href}
+              target='_blank'
+              ref={sponsor.name === 'Incutex' ? ref14 : null}
+            >
               <Image
                 src={sponsor.logo}
                 alt={'Logo de ' + sponsor.name}

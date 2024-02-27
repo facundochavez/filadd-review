@@ -231,6 +231,15 @@ const TourProvider = ({ children }) => {
       target: () => ref13.current,
     },
     {
+      title: 'Incutex',
+      description: (
+        <p>
+          Yo también pasé por aquí 👋😅
+        </p>
+      ),
+      target: () => ref14.current,
+    },
+    {
       title: '¡Nos vemos!',
       description: (
         <p>
@@ -238,7 +247,7 @@ const TourProvider = ({ children }) => {
           que me gustaría compartirles. ¡Espero verlos pronto!
         </p>
       ),
-      target: () => ref14.current,
+      target: () => ref15.current,
     },
   ];
   steps.forEach((step, index) => {
