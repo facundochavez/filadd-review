@@ -289,8 +289,9 @@ const ShowAllButton = ({ stepShowAll, handleClick }) => {
       tabindex={-1}
       onClick={() => {
         if (stepShowAll) {
+          const marginTop = window.innerWidth <= 900 ? 30 : 50;
           window.scrollTo({
-            top: sectionRef.current.offsetTop,
+            top: sectionRef.current.offsetTop + marginTop,
             behavior: 'smooth',
           });
         }
