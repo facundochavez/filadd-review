@@ -33,7 +33,9 @@ const StepsProvider = ({ children }) => {
 
     setSelectedStep(step);
     setInputValue('');
-    inputRef.current.focus({ preventScroll: true });
+    if(window.innerWidth > 900){
+      inputRef.current.focus({ preventScroll: true });
+    }
 
     setTimeout(() => {
       if (sectionRef.current) {

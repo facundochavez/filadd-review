@@ -63,9 +63,9 @@ html {
   max-width: min(85%, 300px) !important;
 }
 
-  .ant-modal {
-    top: unset !important;
-  }
+.ant-modal {
+  top: unset !important;
+}
 
 /* .ant-modal-wrap {
   display: flex !important;

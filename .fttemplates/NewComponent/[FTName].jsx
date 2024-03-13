@@ -5,7 +5,7 @@ const [FTName] = () => {
   //// COMPONENT
   return (
     <div className={styles.[FTName | snakecase]}>
-      
+      [FTName]
     </div>
   );
 };
