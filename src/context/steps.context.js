@@ -33,7 +33,7 @@ const StepsProvider = ({ children }) => {
 
     setSelectedStep(step);
     setInputValue('');
-    if(window.innerWidth > 900){
+    if(window.innerWidth > 1200){
       inputRef.current.focus({ preventScroll: true });
     }
 
