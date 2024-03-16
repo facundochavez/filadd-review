@@ -109,7 +109,7 @@ const TourProvider = ({ children }) => {
         <p>
           Lo más intuitivo es dar un ejemplo de búsqueda de forma directa en el
           placeholder. Me parece lo mejor que el ejemplo sea una universidad del
-          interior, para dejar en claro lo profunda que puede ser la búsqueda.
+          interior, para dejar claro lo profunda que puede ser la búsqueda.
         </p>
       ),
       target: () => ref5.current,
@@ -149,7 +149,7 @@ const TourProvider = ({ children }) => {
         <p>
           Para generar esta sección reuní la información de varias páginas
           actuales, incluso algunas a las que no se puede acceder sin haber
-          creado una cuenta. Es muy importante que quede en claro, de la forma
+          creado una cuenta. Es muy importante que quede claro, de la forma
           más íntegra posible, cómo funciona la aplicación en esta página de
           Inicio.
         </p>
@@ -175,7 +175,7 @@ const TourProvider = ({ children }) => {
       title: 'Asterisco',
       description: (
         <p>
-          Acá la flashié un poco, pero me parece importante dejar en claro que
+          Acá la flashié un poco, pero me parece importante dejar claro que
           ser Premium no involucra tener acceso directo a todos los cursos, sino
           que hay que pagar por cada uno de ellos. Esta es una manera de
           &quot;decirlo sin decirlo&quot;, pero se puede optar por otras formas.
