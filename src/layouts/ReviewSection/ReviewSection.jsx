@@ -32,25 +32,17 @@ const ReviewSection = () => {
         </picture>
         <div>
           <p>
-            ¡Hola Filadd!
+            ¡Hola!
             <br />
             <br />
             Mi nombre es Facundo Chavez. Soy Desarrollador Frontend, Diseñador
             UX/UI y Consultor de Marca.
             <br />
             <br />
-            Hace poco me enteré de ustedes y que buscaban nuevo personal. Me
-            encantó la idea de la <span>startup</span>, pero como la búsqueda
-            fue pausada y yo tenía tanto para contarles, decidí hacer este{' '}
-            <span>review</span> volcando un poco de mis ideas.
-            <br />
-            <br />
             Hice este rediseño con el objetivo principal de aumentar las
             conversiones; incluso algunas decisiones de estilo (uno que busca
-            instalar un perfil más serio) fueron tomadas con ese enfoque. Tengo
-            muchas más ideas para compartirles, tanto para las demás páginas
-            como para la aplicación web, la aplicación movíl e incluso sobre
-            formas de promoción e incentivos para los estudiantes.
+            instalar un perfil más serio de la empresa) fueron tomadas con ese
+            enfoque.
             <br />
             <br />
             ¡Espero que les guste! Aquí les dejo un <span>tour</span> por las
