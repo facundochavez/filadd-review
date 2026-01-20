@@ -13,9 +13,9 @@ const ReviewSection = () => {
       href: 'https://www.linkedin.com/in/facundo-chavez-dev/',
     },
     {
-      name: 'WhatsApp',
-      image: '/icons/icon-whatsapp.svg',
-      href: 'https://api.whatsapp.com/send?phone=543516820080',
+      name: 'GitHub',
+      image: '/icons/icon-github.svg',
+      href: 'https://github.com/facundochavez',
     },
   ];
   //// COMPONENT
